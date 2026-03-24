@@ -150,19 +150,9 @@ export default function Footer() {
             <p className="text-xs text-navy-600">
               &copy; {new Date().getFullYear()} PharmaGrowth. All rights reserved.
             </p>
-            <div className="flex items-center gap-4">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={link.label}
-                  className="text-navy-600 hover:text-white transition-colors"
-                >
-                  {link.icon}
-                </a>
-              ))}
+            <div className="flex gap-6">
+              <span className="text-xs text-navy-600">Privacy Policy</span>
+              <span className="text-xs text-navy-600">Terms of Service</span>
             </div>
           </div>
         </div>
