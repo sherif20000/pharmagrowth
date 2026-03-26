@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import CTAButton from "@/components/CTAButton";
 
 const GUMROAD_URL = "https://sherifelkady.gumroad.com/l/pharmagrowth";
 
@@ -155,49 +155,72 @@ export default function ClaudeSkillsPackPage() {
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-gradient-to-br from-accent-600/5 via-transparent to-transparent" />
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="max-w-3xl">
-            <div className="flex flex-wrap items-center gap-3 mb-6">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-accent-500/10 text-accent-400 text-xs font-semibold rounded-full tracking-wide uppercase">
-                <span className="w-1.5 h-1.5 rounded-full bg-accent-400 animate-pulse" />
-                Available Now
-              </span>
-              <span className="text-navy-500 text-xs">Digital Download · Instant Access</span>
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+            {/* Left: Copy */}
+            <div>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-accent-500/10 text-accent-400 text-xs font-semibold rounded-full tracking-wide uppercase">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent-400 animate-pulse" />
+                  Available Now
+                </span>
+                <span className="text-navy-500 text-xs">Digital Download · Instant Access</span>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
+                Claude AI Skills Pack{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">
+                  Pharma Marketers Edition
+                </span>
+              </h1>
+
+              <p className="text-lg text-navy-300 leading-relaxed mb-4">
+                11 ready-to-install Claude AI skills built for pharmaceutical and consumer healthcare marketers. Campaign planning, brand launch, trade marketing, KOL engagement, regulatory review — all in one pack.
+              </p>
+              <p className="text-navy-500 text-sm mb-10">
+                Built by a pharma marketer. Tested on real campaigns. No coding required.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                <div>
+                  <div className="flex items-baseline gap-2 mb-1">
+                    <span className="text-4xl font-bold text-white">$49</span>
+                    <span className="text-navy-500 text-sm">one-time · instant download</span>
+                  </div>
+                  <p className="text-navy-600 text-xs">11 skills · PDF guide included · Free updates</p>
+                </div>
+                <a
+                  href={GUMROAD_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white text-navy-950 text-base font-bold rounded-xl hover:bg-navy-100 transition-colors shadow-lg shadow-white/10"
+                >
+                  Get the Pack
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </a>
+              </div>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Claude AI Skills Pack{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">
-                Pharma Marketers Edition
-              </span>
-            </h1>
-
-            <p className="text-xl text-navy-300 leading-relaxed mb-4 max-w-2xl">
-              11 ready-to-install Claude AI skills built for pharmaceutical and consumer healthcare marketers. Campaign planning, brand launch, trade marketing, KOL engagement, regulatory review, and more — all in one pack.
-            </p>
-            <p className="text-navy-500 text-sm mb-10">
-              Built by a pharma marketer. Tested on real campaigns. No coding required.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-              <div>
-                <div className="flex items-baseline gap-2 mb-1">
-                  <span className="text-4xl font-bold text-white">$49</span>
-                  <span className="text-navy-500 text-sm">one-time · instant download</span>
-                </div>
-                <p className="text-navy-600 text-xs">11 skills · PDF guide included · Free updates</p>
+            {/* Right: Product image */}
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50">
+                <Image
+                  src="/images/claude-skills-pack-cover.png"
+                  alt="Claude AI Skills Pack: Pharma Marketers Edition"
+                  width={600}
+                  height={400}
+                  className="w-full object-cover"
+                  priority
+                />
               </div>
-              <a
-                href={GUMROAD_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-navy-950 text-base font-bold rounded-xl hover:bg-navy-100 transition-colors shadow-lg shadow-white/10"
-              >
-                Get the Pack
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-              </a>
+              {/* Floating badge */}
+              <div className="absolute -bottom-4 -left-4 bg-navy-900 border border-white/10 rounded-xl px-4 py-3 shadow-xl">
+                <p className="text-white text-sm font-bold">11 skills included</p>
+                <p className="text-navy-500 text-xs">Install once. Use forever.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -252,6 +275,48 @@ export default function ClaudeSkillsPackPage() {
         </div>
       </section>
 
+      {/* Terminal preview */}
+      <section className="py-16 bg-navy-950/50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-navy-500 text-xs uppercase tracking-widest font-semibold mb-8">See it in action</p>
+          <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
+            {/* Terminal chrome */}
+            <div className="flex items-center gap-2 px-4 py-3 bg-navy-800 border-b border-white/5">
+              <span className="w-3 h-3 rounded-full bg-red-500/70" />
+              <span className="w-3 h-3 rounded-full bg-yellow-500/70" />
+              <span className="w-3 h-3 rounded-full bg-green-500/70" />
+              <span className="ml-4 text-navy-500 text-xs font-mono">Claude Code — pharma-brand</span>
+            </div>
+            {/* Terminal body */}
+            <div className="bg-navy-950 p-6 font-mono text-sm space-y-4">
+              <div className="flex items-start gap-3">
+                <span className="text-accent-500 shrink-0">$</span>
+                <span className="text-white">/campaign-planner</span>
+              </div>
+              <div className="text-navy-400 text-xs leading-relaxed border-l-2 border-accent-500/30 pl-4">
+                <p className="text-navy-300 font-semibold mb-2">Campaign Planner — PharmaGrowth</p>
+                <p className="mb-1">Tell me about your campaign:</p>
+                <p className="mb-1 text-navy-500">· Product name and category</p>
+                <p className="mb-1 text-navy-500">· Objective (awareness / trial / rx lift)</p>
+                <p className="mb-1 text-navy-500">· Target audience (HCP / consumer / both)</p>
+                <p className="text-navy-500">· Budget range and timeline</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-green-400 shrink-0">→</span>
+                <span className="text-navy-300 text-xs">Vitamin D supplement, awareness + trial, consumer focus, Q3 launch, SAR 150K budget</span>
+              </div>
+              <div className="text-navy-400 text-xs leading-relaxed border-l-2 border-green-500/30 pl-4 space-y-1">
+                <p className="text-white font-semibold">Campaign Architecture: VitaD Pro — Q3 Consumer Awareness</p>
+                <p className="text-navy-400">Phase 1 (Weeks 1–3): Digital awareness via Instagram + Snapchat. Focus on deficiency education content. KPIs: reach 500K, CPM &lt; SAR 8.</p>
+                <p className="text-navy-400">Phase 2 (Weeks 4–8): Pharmacy activation at Nahdi + Al-Dawaa. Gondola end + pharmacist recommendation program. Target 15% lift in sell-out.</p>
+                <p className="text-navy-400">Phase 3 (Weeks 9–12): Retargeting + loyalty promo via chain apps...</p>
+                <p className="text-accent-500 animate-pulse">▋</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What's inside */}
       <section className="py-20 lg:py-24 bg-navy-900/30 border-y border-white/5">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -301,23 +366,41 @@ export default function ClaudeSkillsPackPage() {
           <div className="grid sm:grid-cols-3 gap-6">
             {[
               {
+                icon: (
+                  <svg className="w-6 h-6 text-accent-500" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                  </svg>
+                ),
                 step: "01",
                 title: "Buy and download",
-                body: "Purchase once on Gumroad. You get instant access to a ZIP file with all 11 SKILL.md files and a PDF installation guide.",
+                body: "Purchase once on Gumroad. Instant access to a ZIP with all 11 SKILL.md files and a PDF installation guide.",
               },
               {
+                icon: (
+                  <svg className="w-6 h-6 text-accent-500" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0H3" />
+                  </svg>
+                ),
                 step: "02",
                 title: "Install Claude Code",
-                body: "The PDF guide walks you through installing Claude Code (Anthropic's free CLI) if you don't already have it. Takes about 5 minutes.",
+                body: "The guide walks you through installing Anthropic's free CLI in ~5 minutes. Works on Mac, Windows, and Linux.",
               },
               {
+                icon: (
+                  <svg className="w-6 h-6 text-accent-500" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
+                  </svg>
+                ),
                 step: "03",
-                title: "Drop the skills in and go",
-                body: "Copy the SKILL.md files into your Claude skills directory. From that point, type /campaign-planner (or any skill) and Claude is ready.",
+                title: "Type a command and go",
+                body: "Drop the skills into your Claude directory. Type /campaign-planner — or any of the 11 skills — and you're working.",
               },
             ].map((step, i) => (
-              <div key={i} className="relative">
-                <div className="text-6xl font-bold text-white/5 mb-4 leading-none">{step.step}</div>
+              <div key={i} className="bg-navy-900 border border-white/5 rounded-2xl p-6 relative">
+                <div className="w-12 h-12 rounded-xl bg-accent-500/10 flex items-center justify-center mb-5">
+                  {step.icon}
+                </div>
+                <span className="absolute top-5 right-5 text-3xl font-bold text-white/5">{step.step}</span>
                 <h3 className="text-white font-semibold mb-2">{step.title}</h3>
                 <p className="text-navy-500 text-sm leading-relaxed">{step.body}</p>
               </div>
