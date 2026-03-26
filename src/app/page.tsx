@@ -38,7 +38,7 @@ const services = [
     ),
     title: "Coaching",
     description: "1:1 premium coaching sessions for brand managers, marketing directors, and career changers seeking rapid growth.",
-    href: "/contact",
+    href: "/coaching",
     price: "$100/hour",
   },
   {
@@ -49,7 +49,7 @@ const services = [
     ),
     title: "Courses",
     description: "Structured 8-week group coaching cohorts and on-demand masterclasses covering digital marketing for pharma.",
-    href: "/contact",
+    href: "/courses",
     price: "Coming Soon",
   },
   {
