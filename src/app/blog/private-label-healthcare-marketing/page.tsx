@@ -38,6 +38,26 @@ export default function PrivateLabelArticle() {
       date="March 23, 2026"
       readTime="12 min read"
       category="Strategy"
+      slug="private-label-healthcare-marketing"
+      publishedDate="2026-03-23"
+      faqItems={[
+        {
+          question: "Why are pharmacy chains launching private label healthcare products?",
+          answer: "Pharmacy chains launch private label products to capture higher margins (typically 40-60% gross margin vs 20-30% on branded products), build customer loyalty, differentiate their offering, and reduce dependence on branded suppliers. Nahdi, Al-Dawaa, and Whites in KSA have all accelerated private label development as part of their profitability strategies.",
+        },
+        {
+          question: "Which consumer healthcare categories are most vulnerable to private label?",
+          answer: "The categories most vulnerable to private label in KSA pharmacies are vitamins and supplements, topical antiseptics, basic wound care, nasal sprays, and generic OTC analgesics. Categories with strong brand equity and clinical differentiation — like branded dermocosmetics and clinically-proven therapeutic brands — are more resilient.",
+        },
+        {
+          question: "How should branded pharma companies respond to private label competition?",
+          answer: "Branded pharma companies should respond to private label competition by strengthening clinical differentiation, investing in pharmacist recommendation programs, building direct consumer loyalty through digital channels, focusing on categories where efficacy evidence is non-replicable, and evaluating co-manufacturing agreements as a revenue opportunity.",
+        },
+        {
+          question: "Can pharma companies benefit from making private label products for pharmacy chains?",
+          answer: "Yes. Co-manufacturing private label products for pharmacy chains can be a viable revenue stream for pharma companies with excess manufacturing capacity. It provides volume, cash flow, and strategic relationship value with major chains — provided it does not cannibalize core branded business or create pricing floor conflicts.",
+        },
+      ]}
     >
       <p>
         Every branded pharma company operating in the GCC has felt it &mdash;

@@ -40,6 +40,26 @@ export default function EcommerceHealthcareArticle() {
       date="March 23, 2026"
       readTime="14 min read"
       category="E-Commerce"
+      slug="ecommerce-consumer-healthcare-products"
+      publishedDate="2026-03-23"
+      faqItems={[
+        {
+          question: "How do consumer healthcare brands sell online in Saudi Arabia?",
+          answer: "Consumer healthcare brands in Saudi Arabia sell online through three primary channels: marketplace platforms (Amazon.sa, Noon.com), e-pharmacy platforms (Nahdi Online, Al-Dawaa digital, Whites online), and direct-to-consumer (DTC) through brand-owned websites or WhatsApp commerce. Each channel requires a different listing, pricing, and activation strategy.",
+        },
+        {
+          question: "What are the SFDA rules for selling healthcare products online in KSA?",
+          answer: "SFDA requires that online pharmacy platforms selling regulated healthcare products (vitamins, medical devices, OTC medicines) hold valid e-pharmacy licenses. Brands must ensure their products are registered with SFDA before listing online. Promotional claims on product listing pages must comply with the same standards as offline advertising.",
+        },
+        {
+          question: "How do you optimize product listings for e-pharmacies in Saudi Arabia?",
+          answer: "Optimizing product listings for KSA e-pharmacies requires Arabic and English titles with high-volume search terms, detailed benefit-focused bullet points, clinical claim substantiation in the description, high-resolution images meeting platform specs, A+ content where available, and regular pricing reviews to maintain competitiveness against private label.",
+        },
+        {
+          question: "What is digital shelf management for pharma brands?",
+          answer: "Digital shelf management refers to monitoring and optimizing how your products appear on e-commerce and e-pharmacy platforms — including search rank, content quality score, availability, pricing position, and review ratings. Leading brands use tools like Profitero or brand-specific dashboards to track digital shelf KPIs across all active platforms.",
+        },
+      ]}
     >
       <p>
         Consumer healthcare e-commerce in Saudi Arabia is no longer the

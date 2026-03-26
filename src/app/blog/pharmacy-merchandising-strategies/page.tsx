@@ -38,6 +38,26 @@ export default function PharmacyMerchandisingStrategiesArticle() {
       date="March 23, 2026"
       readTime="14 min read"
       category="Merchandising"
+      slug="pharmacy-merchandising-strategies"
+      publishedDate="2026-03-23"
+      faqItems={[
+        {
+          question: "What is a pharmacy merchandising strategy?",
+          answer: "A pharmacy merchandising strategy is a systematic plan for maximizing product visibility, shelf presence, and sell-out performance in pharmacy retail environments. It covers planogram design, shelf placement negotiation, point-of-sale material deployment, promotional display management, and digital shelf optimization for e-pharmacy platforms.",
+        },
+        {
+          question: "What is the shelf placement hierarchy in a pharmacy?",
+          answer: "Pharmacy shelf placement follows a vertical hierarchy where eye-level shelves (levels 2-3, approximately 90-160cm from the floor) are the most valuable. Eye-level placement generates the highest conversion rates. Brands typically negotiate for these premium positions through category management proposals, JBPs, or paid shelf fees with major pharmacy chains.",
+        },
+        {
+          question: "How do you audit pharmacy merchandising performance?",
+          answer: "A pharmacy merchandising audit checks five key areas: planogram compliance (is the product in the agreed position?), number of facings vs target, POSM presence and condition, price tag accuracy, and stock availability. Best practice is to conduct monthly audits through field teams and track compliance rates by store and region.",
+        },
+        {
+          question: "What POSM materials work best in KSA pharmacies?",
+          answer: "In KSA pharmacies, the most effective POSM includes shelf talkers with Arabic and English text, counter display units for high-velocity OTC products, floor-standing units for campaign periods, and digital screens in premium pharmacy chains. Materials must comply with SFDA guidelines and not include prohibited claims.",
+        },
+      ]}
     >
       <p>
         There is a hard truth that most pharma brand managers eventually learn:

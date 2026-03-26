@@ -90,6 +90,83 @@ const blogPosts = [
       "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop",
     href: "/blog/ecommerce-consumer-healthcare-products",
   },
+  {
+    title: "Pharmacy Merchandising Strategies That Drive Sell-Out: A Field Guide",
+    excerpt:
+      "Planogram design, shelf placement hierarchy, POSM execution, digital shelf optimization, and a practical audit checklist for pharma brand teams in KSA and GCC.",
+    category: "Merchandising",
+    date: "March 23, 2026",
+    readTime: "13 min read",
+    image:
+      "https://images.unsplash.com/photo-1604881988758-f76ad2f7aac1?w=400&h=250&fit=crop",
+    href: "/blog/pharmacy-merchandising-strategies",
+  },
+  {
+    title: "Healthcare Private Label: How Pharmacy Chains Are Reshaping the OTC Landscape",
+    excerpt:
+      "How Nahdi, Al-Dawaa, and Whites own-brand products are disrupting OTC categories in the GCC — and the defense strategies branded pharma companies need now.",
+    category: "Strategy",
+    date: "March 23, 2026",
+    readTime: "12 min read",
+    image:
+      "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&h=250&fit=crop",
+    href: "/blog/healthcare-private-label-marketing",
+  },
+  {
+    title: "E-Commerce for Consumer Healthcare: How to Win Online in the GCC Market (2026)",
+    excerpt:
+      "Marketplace strategy, e-pharmacy regulations, pricing, digital shelf optimization, and P&L modeling for CHC brands competing on Amazon.sa, Noon, and Nahdi Online.",
+    category: "E-Commerce",
+    date: "March 23, 2026",
+    readTime: "14 min read",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
+    href: "/blog/ecommerce-consumer-healthcare-gcc",
+  },
+  {
+    title: "SFDA Marketing Compliance: What Every Pharma Brand Manager Must Know (2026)",
+    excerpt:
+      "A practical guide to SFDA marketing regulations for pharmaceutical and consumer healthcare brands in Saudi Arabia. Covers what is allowed, what is prohibited, the MLR process, social media rules, and how to build a compliant marketing team.",
+    category: "Regulatory & Compliance",
+    date: "March 26, 2026",
+    readTime: "16 min read",
+    image:
+      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=250&fit=crop",
+    href: "/blog/sfda-marketing-compliance",
+  },
+  {
+    title: "HCP Digital Engagement: How to Reach Doctors Online Without Breaking Compliance (2026)",
+    excerpt:
+      "A practical guide to digital HCP engagement for pharma marketing teams. Approved channels, compliant content formats, omnichannel orchestration, and measurement frameworks for KSA and GCC markets.",
+    category: "Digital Marketing",
+    date: "March 26, 2026",
+    readTime: "15 min read",
+    image:
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=250&fit=crop",
+    href: "/blog/hcp-digital-engagement",
+  },
+  {
+    title: "Pharmacy Channel Management in Saudi Arabia: A Complete Guide for Pharma Brand Teams (2026)",
+    excerpt:
+      "KSA pharmacy landscape, key account management for Nahdi and Al-Dawaa, sell-in vs. sell-out dynamics, listing fees, distribution strategy, and pharmacy activation programs.",
+    category: "Trade Marketing",
+    date: "March 27, 2026",
+    readTime: "16 min read",
+    image:
+      "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&h=250&fit=crop",
+    href: "/blog/pharmacy-channel-management-ksa",
+  },
+  {
+    title: "Pharma Brand Positioning: How to Build a Brand That Doctors and Patients Actually Trust (2026)",
+    excerpt:
+      "A practical framework for pharmaceutical brand positioning in regulated markets. Positioning statement construction, rational vs. emotional drivers, brand architecture models, and trust-building strategies for KSA and GCC brands.",
+    category: "Digital Marketing",
+    date: "March 26, 2026",
+    readTime: "14 min read",
+    image:
+      "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=250&fit=crop",
+    href: "/blog/pharma-brand-positioning",
+  },
 ];
 
 export default function BlogPage() {

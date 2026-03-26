@@ -32,23 +32,23 @@ const credentials = [
 const experience = [
   {
     company: "MPS Bashirco",
-    role: "Senior Digital Marketing & E-Commerce Manager",
-    description: "Led digital transformation for major pharma distribution network across GCC markets.",
+    role: "Business Unit Manager",
+    description: "Led strategic planning and commercial execution for the Oral Care and Beauty Care business units, driving KA partnerships and cross-functional teams across GCC markets.",
   },
   {
     company: "STADA MENA",
-    role: "Marketing Leadership",
-    description: "Managed multi-brand portfolio strategy and digital marketing initiatives across MENA region.",
+    role: "CHC Marketing Manager — KSA & Bahrain",
+    description: "Delivered 50% sales growth and 15% market share gain across the CHC portfolio in KSA & Bahrain — including Nizoral, Septofort, Radian, and 7 new launches.",
   },
   {
-    company: "Al-Dawaa Medical Services",
-    role: "Key Account & Brand Marketing",
-    description: "Drove brand activation and digital shelf strategy with one of KSA's largest pharmacy retail chains.",
+    company: "Zimmo Trading Co.",
+    role: "Marketing Manager",
+    description: "Built the marketing department from scratch, managing 3–4 marketers and full P&L across global healthcare brands including Omron, TENA, and Ducray.",
   },
   {
-    company: "Zimmo Trading",
-    role: "Marketing & Commercial Development",
-    description: "Led commercial marketing for a top-10 KSA pharmaceutical distributor across OTC and consumer healthcare portfolios.",
+    company: "Al-Dawaa Medical Services (DMSCO)",
+    role: "Acting Marketing Manager",
+    description: "Managed brand activation and marketing operations across chain pharmacies, private, and governmental sectors at one of KSA's largest pharmacy retail chains.",
   },
 ];
 
@@ -86,7 +86,7 @@ export default function AboutPage() {
               Sherif Al-Kady
             </h1>
             <p className="text-xl text-accent-500 font-medium mb-4">
-              MBA | Pharma Marketing Leader | Digital Strategist
+              From Brand Lead to Industry Educator
             </p>
             <p className="text-lg text-navy-400 leading-relaxed mb-8">
               With over 20 years of experience in pharmaceutical and consumer healthcare marketing across Egypt and the GCC, Sherif has managed 80+ brands, optimized over $500K in ad spend, and reached more than 30 million consumers. He founded PharmaGrowth to make world-class pharma marketing education accessible to every professional in the region.
@@ -109,7 +109,7 @@ export default function AboutPage() {
             <div>
               <SectionHeading
                 badge="The Story"
-                title="From Brand Manager to Industry Educator"
+                title="From Brand Lead to Industry Educator"
                 centered={false}
               />
               <div className="space-y-4 text-navy-400 text-sm leading-relaxed">
@@ -117,7 +117,7 @@ export default function AboutPage() {
                   Sherif began his career in pharma marketing in Egypt, working his way up from brand manager to leading digital marketing operations for some of the region&apos;s largest pharmaceutical distributors.
                 </p>
                 <p>
-                  His move to the GCC accelerated everything. Working with MPS Bashirco, STADA MENA, Al-Dawaa Medical Services, and Zimmo Trading -- four of KSA&apos;s top pharmaceutical distributors -- he managed multi-brand portfolios spanning OTC pharmaceuticals, dermo-cosmetics, and consumer healthcare products. He led digital transformations, built e-commerce channels, and ran campaigns that reached tens of millions of consumers.
+                  His move to the GCC accelerated everything. At Zimmo Trading, he built the marketing department from scratch and managed global brands including Omron, TENA, and Ducray. At STADA MENA, he drove 50% sales growth across the CHC portfolio in KSA and Bahrain. At MPS Bashirco, he led the Oral Care and Beauty Care business units from strategy to execution. Each role deepened his understanding of what pharma marketers actually need — and what they're rarely taught.
                 </p>
                 <p>
                   Along the way, Sherif noticed a critical gap: talented pharma professionals who wanted to learn digital marketing had nowhere to turn. University programs were too theoretical. Online courses were too generic. And coaching from someone who actually understood pharma? Nearly nonexistent.

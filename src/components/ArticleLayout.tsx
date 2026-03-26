@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 interface ArticleLayoutProps {
   title: string;
   description: string;
@@ -7,19 +12,88 @@ interface ArticleLayoutProps {
   date: string;
   readTime: string;
   category: string;
+  slug?: string;
+  publishedDate?: string; // ISO 8601 e.g. "2026-03-23"
+  faqItems?: FaqItem[];
   children: React.ReactNode;
 }
 
+const BASE_URL = "https://pharmagrowth.co";
+
 export default function ArticleLayout({
   title,
+  description,
   author,
   date,
   readTime,
   category,
+  slug,
+  publishedDate,
+  faqItems,
   children,
 }: ArticleLayoutProps) {
+  const articleUrl = slug ? `${BASE_URL}/blog/${slug}` : `${BASE_URL}/blog`;
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    author: {
+      "@type": "Person",
+      name: author,
+      url: `${BASE_URL}/about`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "PharmaGrowth",
+      url: BASE_URL,
+    },
+    datePublished: publishedDate ?? date,
+    dateModified: publishedDate ?? date,
+    url: articleUrl,
+    mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${BASE_URL}/blog` },
+      { "@type": "ListItem", position: 3, name: title, item: articleUrl },
+    ],
+  };
+
+  const faqSchema = faqItems?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqItems.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
+      }
+    : null;
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+
       {/* Back to Blog */}
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
         <Link
@@ -68,36 +142,52 @@ export default function ArticleLayout({
         {children}
       </article>
 
-      {/* CTA Section */}
+      {/* Conversion CTA Section */}
       <section className="border-t border-white/10">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Join the PharmaGrowth Community
-          </h2>
-          <p className="text-navy-400 text-lg leading-relaxed max-w-xl mx-auto mb-8">
-            Connect with pharma marketing professionals who are building the
-            future of healthcare marketing. Share strategies, access proven
-            frameworks, and accelerate your career.
-          </p>
-          <Link
-            href="/community"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white hover:bg-navy-200 text-navy-950 font-semibold rounded-xl transition-colors"
-          >
-            Join the Community
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-              />
-            </svg>
-          </Link>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="rounded-2xl bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 p-8 lg:p-10">
+            <p className="text-accent-500 text-xs font-semibold uppercase tracking-wider mb-3">
+              Work With Sherif
+            </p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+              Take Your Pharma Marketing Further
+            </h2>
+            <p className="text-navy-400 text-base leading-relaxed mb-8 max-w-xl">
+              20+ years building pharmaceutical and consumer healthcare brands across Saudi Arabia and the GCC. Turn that into your competitive advantage.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+                <p className="text-white font-semibold mb-1">1:1 Strategy Coaching</p>
+                <p className="text-navy-500 text-sm leading-relaxed mb-4">
+                  Focused sessions on your brand, your market, your career. Direct access. No generic frameworks.
+                </p>
+                <Link
+                  href="/coaching"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-navy-950 text-sm font-semibold rounded-lg hover:bg-navy-200 transition-colors"
+                >
+                  Book a Discovery Call
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </Link>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+                <p className="text-white font-semibold mb-1">Courses &amp; Cohorts</p>
+                <p className="text-navy-500 text-sm leading-relaxed mb-4">
+                  Structured programs for pharma marketers who want to master digital marketing, AI tools, and brand strategy.
+                </p>
+                <Link
+                  href="/courses"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold rounded-lg transition-colors border border-white/10"
+                >
+                  View Programs
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

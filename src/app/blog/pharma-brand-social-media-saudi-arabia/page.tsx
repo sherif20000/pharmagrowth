@@ -32,6 +32,26 @@ export default function SocialMediaKSAArticle() {
       date="March 23, 2026"
       readTime="14 min read"
       category="Strategy"
+      slug="pharma-brand-social-media-saudi-arabia"
+      publishedDate="2026-03-23"
+      faqItems={[
+        {
+          question: "Can pharmaceutical companies advertise on social media in Saudi Arabia?",
+          answer: "Yes, pharmaceutical companies can advertise on social media in Saudi Arabia, but OTC and consumer health products must comply with SFDA advertising guidelines. Prescription products cannot be promoted to the general public — digital promotion of Rx products is restricted to HCP-targeted channels only.",
+        },
+        {
+          question: "Which social media platforms are most effective for pharma marketing in KSA?",
+          answer: "In Saudi Arabia, Snapchat reaches the broadest consumer audience (over 21 million users), Instagram is strongest for OTC and dermo-cosmetics brands, LinkedIn is the primary channel for HCP and B2B pharma outreach, and TikTok is growing rapidly for younger consumer health audiences.",
+        },
+        {
+          question: "What content is allowed for pharma brands on social media in Saudi Arabia?",
+          answer: "SFDA-compliant social media content for pharma includes disease awareness, health education, product usage tips for OTC products, pharmacist recommendations, and corporate brand content. Promotional claims for Rx products, before-and-after imagery, and testimonials from patients are restricted.",
+        },
+        {
+          question: "How do you build HCP engagement on LinkedIn in Saudi Arabia?",
+          answer: "HCP engagement on LinkedIn in KSA requires content that provides genuine clinical value — journal summaries, therapeutic area updates, case-based learning, and event announcements. Direct product promotion to HCPs requires regulatory-approved promotional materials and must be gated or clearly labeled.",
+        },
+      ]}
     >
       <p>
         Let me be direct: if your pharmaceutical brand does not have a serious

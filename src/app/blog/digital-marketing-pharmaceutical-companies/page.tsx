@@ -35,6 +35,30 @@ export default function DigitalMarketingPharmaArticle() {
       date="March 23, 2026"
       readTime="18 min read"
       category="Digital Marketing"
+      slug="digital-marketing-pharmaceutical-companies"
+      publishedDate="2026-03-23"
+      faqItems={[
+        {
+          question: "What is digital marketing for pharmaceutical companies?",
+          answer: "Digital marketing for pharmaceutical companies encompasses all online channels used to reach healthcare professionals, patients, and pharmacy buyers — including SEO, social media, email, paid media, and content marketing — while maintaining compliance with regulatory bodies like SFDA and FDA.",
+        },
+        {
+          question: "Which digital marketing channels work best for pharma brands?",
+          answer: "The most effective channels for pharma marketing are LinkedIn and email for HCP engagement, Meta and TikTok for consumer OTC brands, SEO-driven content for organic traffic, and CRM-integrated email for lifecycle marketing. The right mix depends on whether you are marketing to HCPs, patients, or trade channels.",
+        },
+        {
+          question: "How do pharmaceutical companies market products compliantly in Saudi Arabia?",
+          answer: "In Saudi Arabia, pharma marketing must comply with SFDA guidelines, which prohibit direct prescription drug promotion to consumers, mandate fair balance in promotional materials, and require medical review approval before publication. Social media campaigns for Rx products must target HCPs only.",
+        },
+        {
+          question: "What is HCP digital engagement in pharma?",
+          answer: "HCP digital engagement refers to using digital tools — webinars, e-detailing platforms, email sequences, LinkedIn, and medical portals — to reach and educate healthcare professionals (doctors, pharmacists, nurses) about pharmaceutical products and therapeutic areas.",
+        },
+        {
+          question: "How much do pharma companies spend on digital marketing?",
+          answer: "US pharmaceutical companies spent approximately $24.8 billion on digital advertising in 2025, representing over 75% of total pharma ad budgets. In the GCC, digital spend is growing rapidly as part of Vision 2030 healthcare digitization, though absolute figures are not publicly reported.",
+        },
+      ]}
     >
       <p>
         The pharmaceutical industry is in the middle of its most significant

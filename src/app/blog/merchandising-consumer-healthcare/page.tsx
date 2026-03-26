@@ -38,6 +38,26 @@ export default function MerchandisingArticle() {
       date="March 23, 2026"
       readTime="13 min read"
       category="Merchandising"
+      slug="merchandising-consumer-healthcare"
+      publishedDate="2026-03-23"
+      faqItems={[
+        {
+          question: "What is pharmacy merchandising for consumer healthcare brands?",
+          answer: "Pharmacy merchandising for consumer healthcare brands encompasses all activities that influence product visibility and purchase at the pharmacy shelf — including planogram design, shelf placement negotiation, POSM installation, digital shelf management, and category management partnerships with pharmacy chains.",
+        },
+        {
+          question: "How important is shelf placement for OTC product sales?",
+          answer: "Shelf placement is critical for OTC products. Studies consistently show that 70% of pharmacy purchase decisions are made or changed at the shelf. Eye-level placement (shelf levels 2-3) drives 30-40% more sales than floor-level placement. Being off-shelf for even one day in a high-traffic pharmacy can cost significant revenue.",
+        },
+        {
+          question: "What is a planogram and why does it matter for pharma brands?",
+          answer: "A planogram is a visual diagram that prescribes exactly where each product should be placed on a pharmacy shelf — including the number of facings, shelf level, and adjacency to competitors. Brands that provide pharmacy chains with planogram proposals backed by sales data typically achieve better placement and compliance than those who don't.",
+        },
+        {
+          question: "How do Nahdi and Al-Dawaa handle merchandising for OTC brands?",
+          answer: "Nahdi and Al-Dawaa both have national planogram standards that brands must negotiate through their key account teams. Access to premium shelf positions, end-caps, and secondary displays typically requires a formal joint business plan (JBP) agreement, inclusion in their planogram review cycle, and in some cases, shared category management responsibilities.",
+        },
+      ]}
     >
       <p>
         Here is a number that should keep every consumer healthcare brand

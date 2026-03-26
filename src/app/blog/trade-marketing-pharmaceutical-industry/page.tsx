@@ -40,6 +40,26 @@ export default function TradeMarketingArticle() {
       date="March 23, 2026"
       readTime="14 min read"
       category="Trade Marketing"
+      slug="trade-marketing-pharmaceutical-industry"
+      publishedDate="2026-03-23"
+      faqItems={[
+        {
+          question: "What is trade marketing in the pharmaceutical industry?",
+          answer: "Trade marketing in pharma refers to all commercial activities designed to drive product sell-out through the pharmacy channel — including pharmacy negotiations, in-store activation, planogram management, POSM, trade promotions, and category management. It bridges the gap between brand marketing and field sales.",
+        },
+        {
+          question: "How is pharmaceutical trade marketing different from FMCG trade marketing?",
+          answer: "Pharma trade marketing operates under stricter regulatory constraints, with limited ability to use consumer promotions like price reductions on Rx products. Shelf placement is often influenced by pharmacist recommendation rather than consumer impulse. The decision-maker in the channel is the pharmacist or buyer, not the end consumer.",
+        },
+        {
+          question: "What are the key trade marketing metrics in pharma?",
+          answer: "Key pharma trade marketing metrics include sell-out velocity per SKU, share of shelf vs competitors, planogram compliance rate, trade promotion ROI, sell-in to sell-out ratio, pharmacy coverage rate, and digital shelf share on e-pharmacy platforms like Nahdi Online and Amazon.sa.",
+        },
+        {
+          question: "How do you negotiate pharmacy shelf space in Saudi Arabia?",
+          answer: "Negotiating shelf space with KSA pharmacy chains requires a category captain proposal backed by shopper data, market share evidence, and a clear planogram that demonstrates how your brand drives category growth. Joint business plans (JBPs) with Nahdi, Al-Dawaa, and Whites should include mutual targets, activation calendars, and sell-out guarantees.",
+        },
+      ]}
     >
       <p>
         Trade marketing is the single most misunderstood function in the

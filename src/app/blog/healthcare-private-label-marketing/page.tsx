@@ -37,6 +37,26 @@ export default function HealthcarePrivateLabelMarketingArticle() {
       date="March 23, 2026"
       readTime="15 min read"
       category="Private Label"
+      slug="healthcare-private-label-marketing"
+      publishedDate="2026-03-23"
+      faqItems={[
+        {
+          question: "How are pharmacy chains in the Middle East developing private label products?",
+          answer: "GCC pharmacy chains including Nahdi, Al-Dawaa, and Whites are rapidly building private label portfolios in vitamins, supplements, skincare, and basic OTC products. They source from contract manufacturers in Europe, India, and increasingly local KSA facilities, then brand under their pharmacy house brand — offering 20-40% lower retail prices than branded equivalents.",
+        },
+        {
+          question: "Which OTC categories are most affected by private label growth in GCC pharmacies?",
+          answer: "Vitamins and supplements (especially Vitamin C, D, and multivitamins), topical antiseptics, basic wound care, nasal decongestants, and private label skincare are the categories most disrupted by pharmacy chain own brands in the GCC. Clinically differentiated prescription switches and premium dermocosmetics are more resistant.",
+        },
+        {
+          question: "What pricing strategy should branded pharma use against private label?",
+          answer: "Branded pharma companies facing private label competition should avoid direct price matching, which devalues the brand. Instead, maintain a 25-35% price premium supported by clinical superiority messaging, pharmacist education programs, and strong brand equity investment. Use secondary pack sizes or promotional formats to address price-sensitive segments without diluting the core brand.",
+        },
+        {
+          question: "Can pharma manufacturers supply private label products to pharmacy chains?",
+          answer: "Yes. Many pharmaceutical manufacturers in KSA and the region supply private label products to pharmacy chains under toll manufacturing or white-label arrangements. This can be commercially attractive for manufacturers with excess capacity, as it provides revenue without brand investment. However, it requires careful management of IP, quality standards, and potential channel conflict with branded products.",
+        },
+      ]}
     >
       <p>
         If you have spent any time walking the aisles of a Nahdi, Al-Dawaa, or

@@ -38,6 +38,26 @@ export default function EcommerceConsumerHealthcareGCCArticle() {
       date="March 23, 2026"
       readTime="16 min read"
       category="E-Commerce"
+      slug="ecommerce-consumer-healthcare-gcc"
+      publishedDate="2026-03-23"
+      faqItems={[
+        {
+          question: "What is the size of the consumer healthcare e-commerce market in the GCC?",
+          answer: "The GCC consumer healthcare e-commerce market exceeded SAR 3 billion in 2025 in Saudi Arabia alone, with Nahdi Online, Amazon.sa, and Noon.com as the leading platforms. The UAE's e-pharmacy sector is growing at over 25% annually, driven by increased smartphone penetration and government digital health initiatives.",
+        },
+        {
+          question: "Which e-commerce platforms should consumer healthcare brands prioritize in GCC?",
+          answer: "In KSA, brands should prioritize Nahdi Online (largest e-pharmacy by traffic), Amazon.sa (highest consumer trust and Prime penetration), and Al-Dawaa digital for pharmacy-specific healthcare. In the UAE, Noon Health and Aster Online are key. Brands targeting the full GCC should also evaluate UAE-based ship-to-GCC marketplace strategies.",
+        },
+        {
+          question: "What are the e-pharmacy licensing requirements for selling healthcare online in the GCC?",
+          answer: "In Saudi Arabia, e-pharmacies must hold an SFDA e-pharmacy license and can only sell products registered in the SFDA database. Brands selling through licensed platforms are covered by the platform's license, but the product itself must be SFDA-registered and the promotional content must comply with advertising regulations.",
+        },
+        {
+          question: "How do you build a profitable e-commerce P&L for a CHC brand in the GCC?",
+          answer: "A profitable CHC e-commerce P&L in the GCC requires factoring in marketplace fees (typically 10-20% of GMV), fulfillment costs (first-mile + last-mile), digital marketing spend for sponsored product ads, returns provisioning, and a price architecture that maintains offline-online price parity to protect pharmacy channel relationships.",
+        },
+      ]}
     >
       <p>
         The e-commerce revolution in consumer healthcare is no longer a future
