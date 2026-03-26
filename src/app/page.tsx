@@ -167,22 +167,30 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Hero Image */}
+            {/* Hero Visual — brand, not person */}
             <div className="hidden lg:block">
               <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                <img
-                  src="/images/sherif-speaking.png"
-                  alt="Sherif Al-Kady — Pharma Marketing Expert"
-                  className="w-full h-auto object-cover"
+                <Image
+                  src="/images/brand-hero-visual.png"
+                  alt="PharmaGrowth — pharma marketing intelligence platform"
+                  width={800}
+                  height={600}
+                  className="w-full object-cover"
+                  priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/50 to-transparent" />
-                {/* Floating credential badge */}
-                <div className="absolute bottom-5 left-5 flex items-center gap-3 bg-navy-950/80 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3">
-                  <div className="w-2 h-2 rounded-full bg-accent-500 shrink-0" />
-                  <div>
-                    <p className="text-white text-xs font-semibold">Sherif Al-Kady</p>
-                    <p className="text-navy-400 text-xs">20+ Years · 80+ Brands · GCC & MENA</p>
-                  </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 to-transparent" />
+                {/* Floating stat cards */}
+                <div className="absolute bottom-5 left-5 right-5 flex gap-3">
+                  {[
+                    { value: "5,000+", label: "Professionals" },
+                    { value: "80+", label: "Brands Built" },
+                    { value: "GCC", label: "Market Focus" },
+                  ].map((s, i) => (
+                    <div key={i} className="flex-1 bg-navy-950/80 backdrop-blur-sm border border-white/10 rounded-xl px-3 py-2.5 text-center">
+                      <p className="text-white text-sm font-bold leading-none">{s.value}</p>
+                      <p className="text-navy-500 text-xs mt-0.5">{s.label}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
