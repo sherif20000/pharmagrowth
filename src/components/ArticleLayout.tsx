@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export interface FaqItem {
   question: string;
@@ -14,6 +15,8 @@ interface ArticleLayoutProps {
   category: string;
   slug?: string;
   publishedDate?: string; // ISO 8601 e.g. "2026-03-23"
+  heroImage?: string; // path to hero image e.g. "/images/..."
+  heroImageAlt?: string;
   faqItems?: FaqItem[];
   children: React.ReactNode;
 }
@@ -29,6 +32,8 @@ export default function ArticleLayout({
   category,
   slug,
   publishedDate,
+  heroImage,
+  heroImageAlt,
   faqItems,
   children,
 }: ArticleLayoutProps) {
@@ -136,6 +141,23 @@ export default function ArticleLayout({
           <span>{readTime}</span>
         </div>
       </header>
+
+      {/* Hero Image */}
+      {heroImage && (
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+          <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-xl shadow-black/40">
+            <Image
+              src={heroImage}
+              alt={heroImageAlt ?? title}
+              width={900}
+              height={506}
+              className="w-full object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 to-transparent" />
+          </div>
+        </div>
+      )}
 
       {/* Article Content */}
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 article-content">

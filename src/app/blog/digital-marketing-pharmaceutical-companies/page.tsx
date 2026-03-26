@@ -37,6 +37,8 @@ export default function DigitalMarketingPharmaArticle() {
       category="Digital Marketing"
       slug="digital-marketing-pharmaceutical-companies"
       publishedDate="2026-03-23"
+      heroImage="/images/pharma-ai-dashboard.png"
+      heroImageAlt="Pharma digital marketing dashboard showing campaign analytics and brand metrics"
       faqItems={[
         {
           question: "What is digital marketing for pharmaceutical companies?",

@@ -317,6 +317,35 @@ export default function ClaudeSkillsPackPage() {
         </div>
       </section>
 
+      {/* Dashboard visual break */}
+      <section className="py-16 overflow-hidden">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/60">
+            <Image
+              src="/images/pharma-ai-dashboard.png"
+              alt="Pharma marketing AI dashboard — campaign analytics, brand metrics, and AI-generated content"
+              width={1200}
+              height={675}
+              className="w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-wrap items-center gap-6">
+              {[
+                { value: "11", label: "Specialist Skills" },
+                { value: "15 min", label: "Install Time" },
+                { value: "SFDA", label: "Regulatory Context" },
+                { value: "KSA/GCC", label: "Market Focus" },
+              ].map((stat, i) => (
+                <div key={i} className="text-center">
+                  <p className="text-white text-lg font-bold leading-none">{stat.value}</p>
+                  <p className="text-navy-400 text-xs mt-0.5">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What's inside */}
       <section className="py-20 lg:py-24 bg-navy-900/30 border-y border-white/5">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

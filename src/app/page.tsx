@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import CTAButton from "@/components/CTAButton";
 import StatBar from "@/components/StatBar";
 import SectionHeading from "@/components/SectionHeading";
@@ -168,13 +169,21 @@ export default function HomePage() {
 
             {/* Hero Image */}
             <div className="hidden lg:block">
-              <div className="relative rounded-2xl overflow-hidden border border-white/10">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=600&fit=crop"
-                  alt="Pharmaceutical marketing professionals in a modern workspace"
+                  src="/images/sherif-speaking.png"
+                  alt="Sherif Al-Kady — Pharma Marketing Expert"
                   className="w-full h-auto object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/50 to-transparent" />
+                {/* Floating credential badge */}
+                <div className="absolute bottom-5 left-5 flex items-center gap-3 bg-navy-950/80 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3">
+                  <div className="w-2 h-2 rounded-full bg-accent-500 shrink-0" />
+                  <div>
+                    <p className="text-white text-xs font-semibold">Sherif Al-Kady</p>
+                    <p className="text-navy-400 text-xs">20+ Years · 80+ Brands · GCC & MENA</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -208,6 +217,39 @@ export default function HomePage() {
                 <p className="text-accent-500 text-sm font-medium">{service.price}</p>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Visual break — coaching in action */}
+      <section className="overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
+          <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
+            <Image
+              src="/images/pharma-marketing-team.png"
+              alt="Pharma marketing strategy session — PharmaGrowth coaching"
+              width={1400}
+              height={600}
+              className="w-full object-cover max-h-[420px]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy-950/80 via-navy-950/30 to-transparent" />
+            <div className="absolute inset-0 flex items-center">
+              <div className="max-w-lg px-8 lg:px-16">
+                <p className="text-accent-500 text-xs font-semibold uppercase tracking-widest mb-3">1:1 Coaching</p>
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">
+                  Direct access to 20+ years of pharma marketing experience
+                </h2>
+                <a
+                  href="/coaching"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-navy-950 text-sm font-bold rounded-xl hover:bg-navy-100 transition-colors"
+                >
+                  Book a Discovery Call
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
