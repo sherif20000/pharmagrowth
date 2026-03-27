@@ -39,7 +39,7 @@ export default function HealthcarePrivateLabelMarketingArticle() {
       category="Private Label"
       slug="healthcare-private-label-marketing"
       publishedDate="2026-03-23"
-      heroImage="/images/brand-hero-visual.png"
+      heroImage="/images/blog-hero-healthcare-private-label.png"
       heroImageAlt="Branded versus private label healthcare products competing on pharmacy shelves in GCC"
       faqItems={[
         {

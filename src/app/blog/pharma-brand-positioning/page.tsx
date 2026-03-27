@@ -37,7 +37,7 @@ export default function PharmaBrandPositioningArticle() {
       category="Digital Marketing"
       slug="pharma-brand-positioning"
       publishedDate="2026-03-26"
-      heroImage="/images/brand-hero-visual.png"
+      heroImage="/images/blog-hero-brand-positioning.png"
       heroImageAlt="Pharmaceutical brand positioning strategy framework"
       faqItems={[
         {

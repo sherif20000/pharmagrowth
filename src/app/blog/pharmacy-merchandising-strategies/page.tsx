@@ -40,7 +40,7 @@ export default function PharmacyMerchandisingStrategiesArticle() {
       category="Merchandising"
       slug="pharmacy-merchandising-strategies"
       publishedDate="2026-03-23"
-      heroImage="/images/pharma-toolkit-cover.png"
+      heroImage="/images/blog-hero-pharmacy-merchandising.png"
       heroImageAlt="Pharmacy shelf strategy and merchandising execution for consumer healthcare brands"
       faqItems={[
         {

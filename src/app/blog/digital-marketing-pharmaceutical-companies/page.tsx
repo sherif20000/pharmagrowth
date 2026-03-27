@@ -37,7 +37,7 @@ export default function DigitalMarketingPharmaArticle() {
       category="Digital Marketing"
       slug="digital-marketing-pharmaceutical-companies"
       publishedDate="2026-03-23"
-      heroImage="/images/pharma-ai-dashboard.png"
+      heroImage="/images/blog-hero-digital-marketing-pharma.png"
       heroImageAlt="Pharma digital marketing dashboard showing campaign analytics and brand metrics"
       faqItems={[
         {

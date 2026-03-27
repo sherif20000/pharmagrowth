@@ -40,7 +40,7 @@ export default function PrivateLabelArticle() {
       category="Strategy"
       slug="private-label-healthcare-marketing"
       publishedDate="2026-03-23"
-      heroImage="/images/brand-hero-visual.png"
+      heroImage="/images/blog-hero-private-label.png"
       heroImageAlt="Pharmacy shelf showing branded versus private label healthcare products"
       faqItems={[
         {

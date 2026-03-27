@@ -42,7 +42,7 @@ export default function EcommerceHealthcareArticle() {
       category="E-Commerce"
       slug="ecommerce-consumer-healthcare-products"
       publishedDate="2026-03-23"
-      heroImage="/images/pharma-toolkit-cover.png"
+      heroImage="/images/blog-hero-ecommerce-chc.png"
       heroImageAlt="Consumer healthcare products sold through e-commerce platforms in Saudi Arabia"
       faqItems={[
         {

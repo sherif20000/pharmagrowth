@@ -37,7 +37,7 @@ export default function SFDAMarketingComplianceArticle() {
       category="Regulatory & Compliance"
       slug="sfda-marketing-compliance"
       publishedDate="2026-03-26"
-      heroImage="/images/pharma-toolkit-cover.png"
+      heroImage="/images/blog-hero-sfda-compliance.png"
       heroImageAlt="SFDA regulatory compliance framework for pharmaceutical marketing in Saudi Arabia"
       faqItems={[
         {

@@ -37,7 +37,7 @@ export default function PharmacyChannelManagementArticle() {
       category="Trade Marketing"
       slug="pharmacy-channel-management-ksa"
       publishedDate="2026-03-27"
-      heroImage="/images/pharma-toolkit-cover.png"
+      heroImage="/images/blog-hero-pharmacy-channel.png"
       heroImageAlt="Pharmacy channel management tools and strategy for KSA pharma brands"
       faqItems={[
         {

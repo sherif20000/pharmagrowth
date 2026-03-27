@@ -42,7 +42,7 @@ export default function TradeMarketingArticle() {
       category="Trade Marketing"
       slug="trade-marketing-pharmaceutical-industry"
       publishedDate="2026-03-23"
-      heroImage="/images/pharma-marketing-team.png"
+      heroImage="/images/blog-hero-trade-marketing.png"
       heroImageAlt="Pharmaceutical trade marketing team managing pharmacy channel strategy"
       faqItems={[
         {

@@ -40,7 +40,7 @@ export default function EcommerceConsumerHealthcareGCCArticle() {
       category="E-Commerce"
       slug="ecommerce-consumer-healthcare-gcc"
       publishedDate="2026-03-23"
-      heroImage="/images/pharma-toolkit-cover.png"
+      heroImage="/images/blog-hero-ecommerce-gcc.png"
       heroImageAlt="Consumer healthcare e-commerce growth in GCC markets including Saudi Arabia and UAE"
       faqItems={[
         {

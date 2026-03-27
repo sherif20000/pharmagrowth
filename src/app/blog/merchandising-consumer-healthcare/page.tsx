@@ -40,7 +40,7 @@ export default function MerchandisingArticle() {
       category="Merchandising"
       slug="merchandising-consumer-healthcare"
       publishedDate="2026-03-23"
-      heroImage="/images/pharma-toolkit-cover.png"
+      heroImage="/images/blog-hero-merchandising-chc.png"
       heroImageAlt="Consumer healthcare products on pharmacy shelf showing merchandising strategy"
       faqItems={[
         {

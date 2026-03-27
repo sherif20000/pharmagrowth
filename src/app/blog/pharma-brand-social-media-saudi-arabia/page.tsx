@@ -34,7 +34,7 @@ export default function SocialMediaKSAArticle() {
       category="Strategy"
       slug="pharma-brand-social-media-saudi-arabia"
       publishedDate="2026-03-23"
-      heroImage="/images/pharma-marketing-team.png"
+      heroImage="/images/blog-hero-social-media-pharma.png"
       heroImageAlt="Pharmaceutical marketing team building social media strategy in Saudi Arabia"
       faqItems={[
         {

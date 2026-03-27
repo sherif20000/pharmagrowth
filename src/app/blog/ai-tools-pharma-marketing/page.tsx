@@ -38,7 +38,7 @@ export default function AIToolsPharmaArticle() {
       category="AI & Technology"
       slug="ai-tools-pharma-marketing"
       publishedDate="2026-03-23"
-      heroImage="/images/pharma-ai-dashboard.png"
+      heroImage="/images/blog-hero-ai-tools-pharma.png"
       heroImageAlt="AI tools dashboard for pharmaceutical marketing teams"
       faqItems={[
         {

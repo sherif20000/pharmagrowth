@@ -37,7 +37,7 @@ export default function HcpDigitalEngagementArticle() {
       category="Digital Marketing"
       slug="hcp-digital-engagement"
       publishedDate="2026-03-26"
-      heroImage="/images/pharma-marketing-team.png"
+      heroImage="/images/blog-hero-hcp-digital.png"
       heroImageAlt="Pharmaceutical marketing team discussing HCP digital engagement strategy"
       faqItems={[
         {
