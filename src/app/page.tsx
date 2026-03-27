@@ -110,7 +110,7 @@ const freeResources = [
     title: "The GCC Pharma Digital Marketing Playbook",
     description: "5 channels that actually work in KSA, SFDA compliance rules, a LinkedIn content system, and a complete 90-day action plan. Built from 20 years in GCC pharma.",
     format: "PDF · 30 pages",
-    href: "https://pharmagrowth.gumroad.com/l/pharma-digital-marketing-playbook",
+    href: "https://sherifelkady.gumroad.com/l/DigitalMarketingPlaybook",
   },
   {
     title: "Pharma Marketing Plan Template",
