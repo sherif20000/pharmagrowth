@@ -107,19 +107,22 @@ const steps = [
 /* Free resources data merged from resources page */
 const freeResources = [
   {
-    title: "Pharma Digital Marketing Playbook",
-    description: "A comprehensive 30-page guide covering everything you need to launch and scale digital marketing for pharma brands.",
-    format: "PDF",
+    title: "The GCC Pharma Digital Marketing Playbook",
+    description: "5 channels that actually work in KSA, SFDA compliance rules, a LinkedIn content system, and a complete 90-day action plan. Built from 20 years in GCC pharma.",
+    format: "PDF · 30 pages",
+    href: "https://pharmagrowth.gumroad.com/l/pharma-digital-marketing-playbook",
   },
   {
-    title: "Marketing Plan Template",
-    description: "A plug-and-play annual marketing plan template built for pharma brand managers.",
-    format: "Google Sheets",
+    title: "100 AI Prompts for Pharma Marketers",
+    description: "Stop starting from scratch. 100 ready-to-use prompts for brand strategy, HCP content, trade marketing, campaign planning, and compliance-aware copy.",
+    format: "PDF · 100 prompts",
+    href: "https://pharmagrowth.gumroad.com/l/100-ai-prompts-pharma-marketers",
   },
   {
-    title: "Campaign Brief Template",
-    description: "Structure your campaign briefs with this comprehensive template used by top pharma teams.",
-    format: "Google Docs",
+    title: "The KSA Pharmacy Channel Guide",
+    description: "How to win at Nahdi and Al-Dawaa. Covers listing fees, sell-in vs. sell-out, pharmacy activation programs, and e-pharmacy shelf management.",
+    format: "PDF · Practical guide",
+    href: "https://pharmagrowth.gumroad.com/l/ksa-pharmacy-channel-guide",
   },
 ];
 
@@ -268,24 +271,24 @@ export default function HomePage() {
           <SectionHeading
             badge="Free Resources"
             title="Start With These Free Tools"
-            subtitle="Free playbooks, templates, and guides to power your pharma marketing. No sign-up required."
+            subtitle="Free playbooks and guides built specifically for pharma marketers in KSA and the GCC. Download instantly."
           />
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {freeResources.map((resource, i) => (
-              <div key={i} className="bg-navy-900 border border-white/5 rounded-2xl p-6 flex flex-col">
+              <a key={i} href={resource.href} target="_blank" rel="noopener noreferrer" className="bg-navy-900 border border-white/5 hover:border-accent-500/30 rounded-2xl p-6 flex flex-col transition-colors group">
                 <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-accent-500 mb-4">
                   <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
                   </svg>
                 </div>
-                <h3 className="text-white font-semibold mb-2">{resource.title}</h3>
+                <h3 className="text-white font-semibold mb-2 group-hover:text-accent-400 transition-colors">{resource.title}</h3>
                 <p className="text-navy-500 text-sm leading-relaxed flex-1 mb-4">{resource.description}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-navy-600 text-xs">{resource.format}</span>
-                  <span className="text-accent-500 text-sm font-semibold">Free</span>
+                  <span className="text-accent-500 text-sm font-semibold">Download Free →</span>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
 
