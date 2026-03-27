@@ -38,6 +38,8 @@ export default function AIToolsPharmaArticle() {
       category="AI & Technology"
       slug="ai-tools-pharma-marketing"
       publishedDate="2026-03-23"
+      heroImage="/images/pharma-ai-dashboard.png"
+      heroImageAlt="AI tools dashboard for pharmaceutical marketing teams"
       faqItems={[
         {
           question: "Which AI tools are best for pharma marketing?",
@@ -84,6 +86,24 @@ export default function AIToolsPharmaArticle() {
         operating in regulated environments. No image generators, no gimmicks
         &mdash; just tools that solve real problems.
       </p>
+
+      {/* Stat cards */}
+      <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
+        {[
+          { value: "60–70%", label: "Faster first-draft creation with AI" },
+          { value: "40%", label: "Reduction in MLR rejection rates" },
+          { value: "3×", label: "More content output per marketer per week" },
+          { value: "78%", label: "Of pharma teams plan AI adoption by 2026" },
+        ].map((stat) => (
+          <div
+            key={stat.label}
+            className="rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 p-4 text-center"
+          >
+            <p className="text-2xl font-bold text-accent-500 mb-1">{stat.value}</p>
+            <p className="text-xs text-navy-400 leading-snug">{stat.label}</p>
+          </div>
+        ))}
+      </div>
 
       <hr />
 
@@ -169,6 +189,38 @@ export default function AIToolsPharmaArticle() {
         </table>
       </div>
 
+      {/* Pharma Rating Visual */}
+      <div className="not-prose my-8 rounded-2xl border border-white/10 bg-navy-900/60 p-6">
+        <p className="text-xs font-semibold text-accent-500 uppercase tracking-wider mb-1">Pharma Rating</p>
+        <h3 className="text-white font-bold text-lg mb-5">How Each Tool Scores for Pharma Marketing</h3>
+        <div className="space-y-3">
+          {[
+            { tool: "Claude AI", score: 9.5, color: "#00d4b8" },
+            { tool: "ChatGPT Plus", score: 9.0, color: "#00d4b8" },
+            { tool: "Perplexity AI", score: 9.0, color: "#00d4b8" },
+            { tool: "Canva AI", score: 9.0, color: "#00d4b8" },
+            { tool: "Google Analytics 4", score: 9.0, color: "#00d4b8" },
+            { tool: "Gamma", score: 8.5, color: "#60a5fa" },
+            { tool: "HubSpot CRM", score: 8.5, color: "#60a5fa" },
+            { tool: "Hootsuite / Buffer", score: 8.0, color: "#60a5fa" },
+            { tool: "Systeme.io", score: 8.0, color: "#60a5fa" },
+            { tool: "Descript", score: 8.0, color: "#60a5fa" },
+          ].map((item) => (
+            <div key={item.tool} className="flex items-center gap-3">
+              <span className="text-sm text-navy-300 w-36 shrink-0">{item.tool}</span>
+              <div className="flex-1 bg-white/5 rounded-full h-2.5 overflow-hidden">
+                <div
+                  className="h-full rounded-full"
+                  style={{ width: `${(item.score / 10) * 100}%`, backgroundColor: item.color }}
+                />
+              </div>
+              <span className="text-sm font-semibold text-white w-10 text-right">{item.score}</span>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-navy-500 mt-4">Ratings based on compliance safety, ease of use, pharma-specific utility, and value for money.</p>
+      </div>
+
       <hr />
 
       <h2>1. Claude AI (Anthropic) &mdash; Regulatory-Safe Content Drafting and Medical Writing</h2>
@@ -243,6 +295,49 @@ export default function AIToolsPharmaArticle() {
           compliance pre-screening, and strategic analysis.
         </p>
       </blockquote>
+
+      {/* Content workflow time savings visual */}
+      <div className="not-prose my-8 rounded-2xl border border-white/10 bg-navy-900/60 p-6">
+        <p className="text-xs font-semibold text-accent-500 uppercase tracking-wider mb-1">Time Savings</p>
+        <h3 className="text-white font-bold text-lg mb-5">AI vs. Traditional Workflow — Hours Per Task</h3>
+        <div className="space-y-4">
+          {[
+            { task: "Medical writing first draft", traditional: 8, ai: 2.5 },
+            { task: "MLR pre-screening pass", traditional: 4, ai: 0.5 },
+            { task: "Social media content (weekly)", traditional: 5, ai: 1.5 },
+            { task: "Competitive intelligence brief", traditional: 6, ai: 1 },
+            { task: "HCP email sequence (5 emails)", traditional: 4, ai: 1 },
+          ].map((item) => (
+            <div key={item.task}>
+              <div className="flex justify-between text-xs text-navy-400 mb-1.5">
+                <span>{item.task}</span>
+                <span className="text-accent-500 font-semibold">
+                  {Math.round((1 - item.ai / item.traditional) * 100)}% faster
+                </span>
+              </div>
+              <div className="flex gap-2 items-center">
+                <div className="flex-1 space-y-1">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs text-navy-500 w-20 shrink-0">Traditional</span>
+                    <div className="flex-1 bg-white/5 rounded-full h-2">
+                      <div className="h-full rounded-full bg-navy-600" style={{ width: `${(item.traditional / 10) * 100}%` }} />
+                    </div>
+                    <span className="text-xs text-navy-400 w-12 text-right">{item.traditional}h</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs text-navy-500 w-20 shrink-0">With AI</span>
+                    <div className="flex-1 bg-white/5 rounded-full h-2">
+                      <div className="h-full rounded-full bg-accent-500" style={{ width: `${(item.ai / 10) * 100}%` }} />
+                    </div>
+                    <span className="text-xs text-accent-500 font-semibold w-12 text-right">{item.ai}h</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-navy-500 mt-4">Based on field estimates from working pharma marketing teams. Results vary by team size, tool configuration, and content complexity.</p>
+      </div>
 
       <hr />
 
@@ -924,6 +1019,52 @@ export default function AIToolsPharmaArticle() {
         <li><strong>Gamma</strong> &mdash; Rapid presentation and training deck creation (<a href="https://gamma.app/signup?r=frpss8h841s6v8o" target="_blank" rel="noopener noreferrer">try free</a>)</li>
         <li><strong>Descript</strong> &mdash; Video and podcast content production</li>
       </ol>
+
+      {/* Stack by role visual */}
+      <div className="not-prose my-8 grid sm:grid-cols-3 gap-4">
+        {[
+          {
+            tier: "Essential",
+            subtitle: "Every pharma marketer",
+            budget: "~$20/mo",
+            tools: ["Claude AI", "Google Analytics 4", "Canva AI"],
+            color: "#00d4b8",
+          },
+          {
+            tier: "Growth",
+            subtitle: "Expanding digital presence",
+            budget: "~$60/mo",
+            tools: ["+ ChatGPT Plus", "+ Perplexity AI", "+ Systeme.io"],
+            color: "#60a5fa",
+          },
+          {
+            tier: "Enterprise",
+            subtitle: "Full AI-powered marketing",
+            budget: "~$200+/mo",
+            tools: ["+ HubSpot CRM", "+ Hootsuite", "+ Gamma", "+ Descript"],
+            color: "#a78bfa",
+          },
+        ].map((stack) => (
+          <div
+            key={stack.tier}
+            className="rounded-xl border border-white/10 bg-navy-900/60 p-5"
+          >
+            <div className="flex items-center gap-2 mb-1">
+              <div className="w-2 h-2 rounded-full" style={{ backgroundColor: stack.color }} />
+              <span className="font-bold text-white text-sm">{stack.tier} Stack</span>
+            </div>
+            <p className="text-xs text-navy-400 mb-1">{stack.subtitle}</p>
+            <p className="text-xs font-semibold mb-3" style={{ color: stack.color }}>{stack.budget}</p>
+            <ul className="space-y-1">
+              {stack.tools.map((t) => (
+                <li key={t} className="text-xs text-navy-300 flex items-center gap-1.5">
+                  <span style={{ color: stack.color }}>›</span> {t}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
 
       <h3>A Note on Governance</h3>
       <p>

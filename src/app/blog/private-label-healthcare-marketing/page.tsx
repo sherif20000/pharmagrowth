@@ -40,6 +40,8 @@ export default function PrivateLabelArticle() {
       category="Strategy"
       slug="private-label-healthcare-marketing"
       publishedDate="2026-03-23"
+      heroImage="/images/brand-hero-visual.png"
+      heroImageAlt="Pharmacy shelf showing branded versus private label healthcare products"
       faqItems={[
         {
           question: "Why are pharmacy chains launching private label healthcare products?",
@@ -89,6 +91,21 @@ export default function PrivateLabelArticle() {
         co-manufacturing for a chain, you will find practical frameworks here
         that you can act on immediately.
       </p>
+
+      {/* Private Label Stats */}
+      <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
+        {[
+          { value: "40–60%", label: "Gross margin on private label vs. 20–30% on branded products" },
+          { value: "15–20%", label: "Volume share a brand can lose in 1 year to a new store brand" },
+          { value: "3×", label: "Faster growth in vitamins/supplements private label vs. category average" },
+          { value: "SAR 2B+", label: "Estimated value of private label healthcare in KSA by 2027" },
+        ].map((stat) => (
+          <div key={stat.label} className="rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 p-4 text-center">
+            <p className="text-2xl font-bold text-accent-500 mb-1">{stat.value}</p>
+            <p className="text-xs text-navy-400 leading-snug">{stat.label}</p>
+          </div>
+        ))}
+      </div>
 
       <hr />
 
@@ -268,6 +285,33 @@ export default function PrivateLabelArticle() {
       </div>
 
       <hr />
+
+      {/* Private Label Vulnerability Bar Chart */}
+      <div className="not-prose my-8 rounded-2xl border border-white/10 bg-navy-900/60 p-6">
+        <p className="text-xs font-semibold text-accent-500 uppercase tracking-wider mb-1">Risk Assessment</p>
+        <h3 className="text-white font-bold text-lg mb-5">Private Label Disruption Risk by Category — GCC Pharmacy</h3>
+        <div className="space-y-3">
+          {[
+            { category: "Vitamins & Supplements", risk: 9.5, color: "#ef4444" },
+            { category: "Antiseptics & Wound Care", risk: 9.0, color: "#ef4444" },
+            { category: "Nasal Sprays (generic)", risk: 8.5, color: "#ef4444" },
+            { category: "Analgesics (OTC)", risk: 8.0, color: "#ef4444" },
+            { category: "Oral Care (basic)", risk: 7.0, color: "#f59e0b" },
+            { category: "Baby Care (non-specialist)", risk: 6.5, color: "#f59e0b" },
+            { category: "Dermocosmetics (branded)", risk: 4.0, color: "#00d4b8" },
+            { category: "Clinically-proven Rx-adjacent", risk: 2.0, color: "#00d4b8" },
+          ].map((item) => (
+            <div key={item.category} className="flex items-center gap-3">
+              <span className="text-sm text-navy-300 w-52 shrink-0">{item.category}</span>
+              <div className="flex-1 bg-white/5 rounded-full h-2.5 overflow-hidden">
+                <div className="h-full rounded-full" style={{ width: `${(item.risk / 10) * 100}%`, backgroundColor: item.color }} />
+              </div>
+              <span className="text-sm font-semibold text-white w-10 text-right">{item.risk}</span>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-navy-500 mt-4">Risk score out of 10 — red = high disruption risk, teal = defensible with brand investment</p>
+      </div>
 
       <h2>Categories Most Vulnerable to Private Label Disruption</h2>
       <p>

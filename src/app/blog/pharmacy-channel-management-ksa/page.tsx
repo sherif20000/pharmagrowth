@@ -37,6 +37,8 @@ export default function PharmacyChannelManagementArticle() {
       category="Trade Marketing"
       slug="pharmacy-channel-management-ksa"
       publishedDate="2026-03-27"
+      heroImage="/images/pharma-toolkit-cover.png"
+      heroImageAlt="Pharmacy channel management tools and strategy for KSA pharma brands"
       faqItems={[
         {
           question: "Who are the major pharmacy chains in Saudi Arabia?",
@@ -80,6 +82,20 @@ export default function PharmacyChannelManagementArticle() {
         It covers the landscape, the players, the commercial frameworks, and the
         activation strategies that drive real sell-out results.
       </p>
+
+      <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
+        {[
+          { value: "1,000+", label: "Nahdi branches across KSA — the dominant pharmacy chain" },
+          { value: "60%", label: "Of KSA OTC purchasing decisions influenced at pharmacy point of sale" },
+          { value: "SAR 28B", label: "KSA pharmaceutical market size — pharmacy channel dominates" },
+          { value: "35%", label: "Year-on-year growth in e-pharmacy sales in Saudi Arabia" },
+        ].map((stat) => (
+          <div key={stat.label} className="bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 rounded-xl p-4 text-center">
+            <div className="text-2xl font-bold text-accent mb-1">{stat.value}</div>
+            <div className="text-xs text-white/60 leading-snug">{stat.label}</div>
+          </div>
+        ))}
+      </div>
 
       <hr />
 
@@ -185,6 +201,31 @@ export default function PharmacyChannelManagementArticle() {
         positive return. Push for promotional activity commitments alongside
         any listing investment.
       </p>
+
+      <div className="not-prose my-8 bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 rounded-2xl p-6">
+        <h3 className="text-base font-semibold text-white mb-1">KSA Pharmacy Channel — Sell-Out Influence by Factor</h3>
+        <p className="text-xs text-white/50 mb-5">Estimated sell-out impact score (0–10) per channel investment lever</p>
+        <div className="space-y-3">
+          {[
+            { label: "Pharmacist Training & Recommendation", score: 9.5, color: "#00d4b8" },
+            { label: "Shelf Position & Eye-Level Placement", score: 9.0, color: "#00d4b8" },
+            { label: "Secondary Display / Gondola End", score: 8.5, color: "#00d4b8" },
+            { label: "Consumer Promotion (BOGO, Bundle)", score: 7.5, color: "#00d4b8" },
+            { label: "Digital Shelf (E-Pharmacy Listing)", score: 7.0, color: "#f59e0b" },
+            { label: "Listing Fee Without Activation", score: 3.5, color: "#ef4444" },
+            { label: "Sell-In Deal Without Sell-Out Plan", score: 2.0, color: "#ef4444" },
+          ].map((item) => (
+            <div key={item.label} className="flex items-center gap-3">
+              <span className="text-xs text-white/70 w-56 shrink-0">{item.label}</span>
+              <div className="flex-1 bg-white/5 rounded-full h-2.5 overflow-hidden">
+                <div className="h-full rounded-full transition-all" style={{ width: `${(item.score / 10) * 100}%`, backgroundColor: item.color }} />
+              </div>
+              <span className="text-xs font-semibold text-white/80 w-8 text-right">{item.score}</span>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-white/30 mt-4">Listing fees and sell-in deals score low without a linked activation and sell-out plan.</p>
+      </div>
 
       <h2>Pharmacy Activation Programs That Drive Sell-Out</h2>
       <p>

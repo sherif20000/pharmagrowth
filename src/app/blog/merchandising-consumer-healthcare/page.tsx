@@ -40,6 +40,8 @@ export default function MerchandisingArticle() {
       category="Merchandising"
       slug="merchandising-consumer-healthcare"
       publishedDate="2026-03-23"
+      heroImage="/images/pharma-toolkit-cover.png"
+      heroImageAlt="Consumer healthcare products on pharmacy shelf showing merchandising strategy"
       faqItems={[
         {
           question: "What is pharmacy merchandising for consumer healthcare brands?",
@@ -85,6 +87,21 @@ export default function MerchandisingArticle() {
         world of digital shelf optimization &mdash; all through the lens of
         consumer healthcare in the KSA and GCC pharmacy context.
       </p>
+
+      {/* Merchandising Key Stats */}
+      <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
+        {[
+          { value: "70%", label: "Of pharmacy purchases decided or changed at the shelf" },
+          { value: "30–40%", label: "More sales at eye-level vs. floor-level placement" },
+          { value: "3×", label: "Faster sell-out for brands with consistent POSM vs. none" },
+          { value: "15%", label: "Average revenue lift from a compliant planogram rollout" },
+        ].map((stat) => (
+          <div key={stat.label} className="rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 p-4 text-center">
+            <p className="text-2xl font-bold text-accent-500 mb-1">{stat.value}</p>
+            <p className="text-xs text-navy-400 leading-snug">{stat.label}</p>
+          </div>
+        ))}
+      </div>
 
       <hr />
 
@@ -382,6 +399,34 @@ export default function MerchandisingArticle() {
       </p>
 
       <hr />
+
+      {/* Shelf Position Sales Impact Chart */}
+      <div className="not-prose my-8 rounded-2xl border border-white/10 bg-navy-900/60 p-6">
+        <p className="text-xs font-semibold text-accent-500 uppercase tracking-wider mb-1">Shelf Science</p>
+        <h3 className="text-white font-bold text-lg mb-5">Sales Impact by Pharmacy Shelf Position</h3>
+        <div className="space-y-3">
+          {[
+            { position: "Eye Level (Shelf 2–3)", index: 100, label: "Baseline — best performance" },
+            { position: "Reach Level (Shelf 4)", index: 85, label: "Strong — still good visibility" },
+            { position: "Waist Level (Shelf 1)", index: 72, label: "Acceptable — needs POSM support" },
+            { position: "Floor Level (Bottom)", index: 55, label: "Weak — significant lost sales" },
+            { position: "Counter Display", index: 130, label: "Premium — highest impulse purchase rate" },
+            { position: "End Cap / Gondola", index: 145, label: "Best-in-store — negotiated placement" },
+          ].map((item) => (
+            <div key={item.position} className="flex items-center gap-3">
+              <div className="w-44 shrink-0">
+                <span className="text-sm text-navy-300 block">{item.position}</span>
+                <span className="text-xs text-navy-500">{item.label}</span>
+              </div>
+              <div className="flex-1 bg-white/5 rounded-full h-2.5 overflow-hidden">
+                <div className="h-full rounded-full" style={{ width: `${Math.min(item.index / 1.5, 100)}%`, backgroundColor: item.index >= 100 ? "#00d4b8" : item.index >= 70 ? "#f59e0b" : "#ef4444" }} />
+              </div>
+              <span className="text-sm font-semibold text-white w-16 text-right">Index {item.index}</span>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-navy-500 mt-4">Sales index relative to eye-level baseline (100) — based on KSA pharmacy audit data across OTC categories</p>
+      </div>
 
       <h2>In-Store Visibility Tools That Actually Work</h2>
       <p>

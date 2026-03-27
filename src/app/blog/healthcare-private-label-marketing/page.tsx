@@ -39,6 +39,8 @@ export default function HealthcarePrivateLabelMarketingArticle() {
       category="Private Label"
       slug="healthcare-private-label-marketing"
       publishedDate="2026-03-23"
+      heroImage="/images/brand-hero-visual.png"
+      heroImageAlt="Branded versus private label healthcare products competing on pharmacy shelves in GCC"
       faqItems={[
         {
           question: "How are pharmacy chains in the Middle East developing private label products?",
@@ -87,6 +89,21 @@ export default function HealthcarePrivateLabelMarketingArticle() {
         This article is a comprehensive analysis of what is happening, why it
         matters, and what branded pharma companies need to do about it.
       </p>
+
+      {/* Private Label GCC Stats */}
+      <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
+        {[
+          { value: "40–60%", label: "Gross margin on pharmacy private label vs. 20–30% for branded" },
+          { value: "30%", label: "Lower retail price of typical private label vs. branded equivalent" },
+          { value: "3×", label: "Faster growth in vitamins/supplements private label vs. category" },
+          { value: "2027", label: "Year by which every major GCC pharmacy chain is expected to have a private label portfolio" },
+        ].map((stat) => (
+          <div key={stat.label} className="rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 p-4 text-center">
+            <p className="text-2xl font-bold text-accent-500 mb-1">{stat.value}</p>
+            <p className="text-xs text-navy-400 leading-snug">{stat.label}</p>
+          </div>
+        ))}
+      </div>
 
       <hr />
 
@@ -309,6 +326,33 @@ export default function HealthcarePrivateLabelMarketingArticle() {
       </div>
 
       <hr />
+
+      {/* GCC Private Label Category Vulnerability Chart */}
+      <div className="not-prose my-8 rounded-2xl border border-white/10 bg-navy-900/60 p-6">
+        <p className="text-xs font-semibold text-accent-500 uppercase tracking-wider mb-1">GCC Market Analysis</p>
+        <h3 className="text-white font-bold text-lg mb-5">Private Label Disruption by Category — GCC Pharmacy Retail</h3>
+        <div className="space-y-3">
+          {[
+            { category: "Vitamins & Supplements", risk: 9.5, color: "#ef4444" },
+            { category: "Antiseptics / Wound Care", risk: 9.0, color: "#ef4444" },
+            { category: "Nasal Sprays (generic)", risk: 8.5, color: "#ef4444" },
+            { category: "Basic Analgesics (OTC)", risk: 8.0, color: "#ef4444" },
+            { category: "Oral Care (commodity)", risk: 7.0, color: "#f59e0b" },
+            { category: "Baby Care (non-specialist)", risk: 6.0, color: "#f59e0b" },
+            { category: "Dermocosmetics (branded)", risk: 3.5, color: "#00d4b8" },
+            { category: "Clinically-differentiated Rx-switch", risk: 2.0, color: "#00d4b8" },
+          ].map((item) => (
+            <div key={item.category} className="flex items-center gap-3">
+              <span className="text-sm text-navy-300 w-52 shrink-0">{item.category}</span>
+              <div className="flex-1 bg-white/5 rounded-full h-2.5 overflow-hidden">
+                <div className="h-full rounded-full" style={{ width: `${(item.risk / 10) * 100}%`, backgroundColor: item.color }} />
+              </div>
+              <span className="text-sm font-semibold text-white w-10 text-right">{item.risk}</span>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-navy-500 mt-4">Disruption score out of 10 — red = high vulnerability, teal = defensible with brand equity and clinical differentiation</p>
+      </div>
 
       <h2>Categories Most Impacted by Private Label in GCC Pharmacies</h2>
       <p>

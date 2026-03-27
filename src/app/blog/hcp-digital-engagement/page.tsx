@@ -37,6 +37,8 @@ export default function HcpDigitalEngagementArticle() {
       category="Digital Marketing"
       slug="hcp-digital-engagement"
       publishedDate="2026-03-26"
+      heroImage="/images/pharma-marketing-team.png"
+      heroImageAlt="Pharmaceutical marketing team discussing HCP digital engagement strategy"
       faqItems={[
         {
           question: "What digital channels can pharmaceutical companies use to engage HCPs?",
@@ -81,6 +83,20 @@ export default function HcpDigitalEngagementArticle() {
         build a compliant, effective digital HCP engagement strategy from the
         ground up.
       </p>
+
+      <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
+        {[
+          { value: "50%+", label: "Of GCC HCPs restrict or limit face-to-face rep access" },
+          { value: "7–10×", label: "Digital touchpoints required per HCP before prescribing action" },
+          { value: "3×", label: "Higher engagement rate on educational vs. promotional HCP content" },
+          { value: "65%", label: "Of KSA physicians prefer receiving clinical updates digitally" },
+        ].map((stat) => (
+          <div key={stat.label} className="bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 rounded-xl p-4 text-center">
+            <div className="text-2xl font-bold text-accent mb-1">{stat.value}</div>
+            <div className="text-xs text-white/60 leading-snug">{stat.label}</div>
+          </div>
+        ))}
+      </div>
 
       <hr />
 
@@ -341,6 +357,31 @@ export default function HcpDigitalEngagementArticle() {
         enables rapid, MLR-compliant content deployment, and a commercial
         team trained to use both.
       </p>
+
+      <div className="not-prose my-8 bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 rounded-2xl p-6">
+        <h3 className="text-base font-semibold text-white mb-1">HCP Digital Channel Effectiveness — KSA Pharma</h3>
+        <p className="text-xs text-white/50 mb-5">Composite score (0–10) based on reach, compliance feasibility, and engagement depth</p>
+        <div className="space-y-3">
+          {[
+            { label: "Branded HCP Email", score: 9.0, color: "#00d4b8" },
+            { label: "Remote / Digital Detailing", score: 8.5, color: "#00d4b8" },
+            { label: "Webinars & Virtual CME", score: 8.0, color: "#00d4b8" },
+            { label: "HCP Portal (Self-Serve)", score: 7.5, color: "#00d4b8" },
+            { label: "LinkedIn (Organic)", score: 7.0, color: "#f59e0b" },
+            { label: "WhatsApp (Professional)", score: 6.0, color: "#f59e0b" },
+            { label: "Open Social Media (DTC)", score: 3.0, color: "#ef4444" },
+          ].map((item) => (
+            <div key={item.label} className="flex items-center gap-3">
+              <span className="text-xs text-white/70 w-48 shrink-0">{item.label}</span>
+              <div className="flex-1 bg-white/5 rounded-full h-2.5 overflow-hidden">
+                <div className="h-full rounded-full transition-all" style={{ width: `${(item.score / 10) * 100}%`, backgroundColor: item.color }} />
+              </div>
+              <span className="text-xs font-semibold text-white/80 w-8 text-right">{item.score}</span>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-white/30 mt-4">Open social media scored low due to compliance barriers for HCP-targeted promotional content.</p>
+      </div>
 
       <h2>Measuring HCP Digital Engagement</h2>
       <p>

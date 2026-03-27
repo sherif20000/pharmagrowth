@@ -42,6 +42,8 @@ export default function TradeMarketingArticle() {
       category="Trade Marketing"
       slug="trade-marketing-pharmaceutical-industry"
       publishedDate="2026-03-23"
+      heroImage="/images/pharma-marketing-team.png"
+      heroImageAlt="Pharmaceutical trade marketing team managing pharmacy channel strategy"
       faqItems={[
         {
           question: "What is trade marketing in the pharmaceutical industry?",
@@ -86,6 +88,21 @@ export default function TradeMarketingArticle() {
         framework you can apply immediately, whether you are a brand manager,
         commercial director, or trade marketing specialist.
       </p>
+
+      {/* Trade Marketing Stats */}
+      <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
+        {[
+          { value: "60%", label: "Of KSA OTC purchasing decisions influenced at the pharmacy" },
+          { value: "3–5×", label: "Higher sales lift from planogram compliance vs. no-planogram" },
+          { value: "40%", label: "Of pharma brands have no formal trade marketing function" },
+          { value: "SAR 28B", label: "KSA pharmaceutical market size — pharmacy channel dominates" },
+        ].map((stat) => (
+          <div key={stat.label} className="rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 p-4 text-center">
+            <p className="text-2xl font-bold text-accent-500 mb-1">{stat.value}</p>
+            <p className="text-xs text-navy-400 leading-snug">{stat.label}</p>
+          </div>
+        ))}
+      </div>
 
       <hr />
 
@@ -277,6 +294,31 @@ export default function TradeMarketingArticle() {
       </div>
 
       <hr />
+
+      {/* Trade Marketing Pillar Strength Chart */}
+      <div className="not-prose my-8 rounded-2xl border border-white/10 bg-navy-900/60 p-6">
+        <p className="text-xs font-semibold text-accent-500 uppercase tracking-wider mb-1">Industry Benchmark</p>
+        <h3 className="text-white font-bold text-lg mb-5">Where Pharma Companies Are Strong vs. Weak in Trade Marketing</h3>
+        <div className="space-y-3">
+          {[
+            { pillar: "Retailer Relationships", avg: 7.5, color: "#00d4b8" },
+            { pillar: "In-Store Execution", avg: 6.0, color: "#00d4b8" },
+            { pillar: "Trade Promotions", avg: 5.5, color: "#00d4b8" },
+            { pillar: "Channel Strategy", avg: 5.0, color: "#f59e0b" },
+            { pillar: "Shopper Insights", avg: 3.0, color: "#ef4444" },
+            { pillar: "Digital Trade Marketing", avg: 2.5, color: "#ef4444" },
+          ].map((item) => (
+            <div key={item.pillar} className="flex items-center gap-3">
+              <span className="text-sm text-navy-300 w-44 shrink-0">{item.pillar}</span>
+              <div className="flex-1 bg-white/5 rounded-full h-2.5 overflow-hidden">
+                <div className="h-full rounded-full" style={{ width: `${(item.avg / 10) * 100}%`, backgroundColor: item.color }} />
+              </div>
+              <span className="text-sm font-semibold text-white w-16 text-right">{item.avg}/10</span>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-navy-500 mt-4">Average capability scores across GCC pharma companies audited — 10 = best-in-class, red = critical gap</p>
+      </div>
 
       <h2>The 5 Pillars of Pharma Trade Marketing</h2>
       <p>

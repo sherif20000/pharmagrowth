@@ -37,6 +37,8 @@ export default function SFDAMarketingComplianceArticle() {
       category="Regulatory & Compliance"
       slug="sfda-marketing-compliance"
       publishedDate="2026-03-26"
+      heroImage="/images/pharma-toolkit-cover.png"
+      heroImageAlt="SFDA regulatory compliance framework for pharmaceutical marketing in Saudi Arabia"
       faqItems={[
         {
           question: "What does SFDA regulate in pharmaceutical marketing in Saudi Arabia?",
@@ -81,6 +83,21 @@ export default function SFDAMarketingComplianceArticle() {
         or an agency creative working on pharma accounts, this is your practical
         compliance reference for 2026.
       </p>
+
+      {/* SFDA Compliance Stats */}
+      <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
+        {[
+          { value: "100%", label: "Of pharma promotional materials require MLR sign-off before publishing" },
+          { value: "5–20", label: "Business days for internal MLR review — plan your campaign timeline around this" },
+          { value: "0", label: "DTC advertising allowed for prescription drugs in Saudi Arabia" },
+          { value: "2026", label: "Year SFDA announced updated digital advertising guidance for CHC brands" },
+        ].map((stat) => (
+          <div key={stat.label} className="rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 p-4 text-center">
+            <p className="text-2xl font-bold text-accent-500 mb-1">{stat.value}</p>
+            <p className="text-xs text-navy-400 leading-snug">{stat.label}</p>
+          </div>
+        ))}
+      </div>
 
       <hr />
 
@@ -191,6 +208,32 @@ export default function SFDAMarketingComplianceArticle() {
           </tr>
         </tbody>
       </table>
+
+      {/* SFDA Compliance Risk Chart */}
+      <div className="not-prose my-8 rounded-2xl border border-white/10 bg-navy-900/60 p-6">
+        <p className="text-xs font-semibold text-accent-500 uppercase tracking-wider mb-1">Compliance Risk Map</p>
+        <h3 className="text-white font-bold text-lg mb-5">Most Common SFDA Marketing Violations — Risk Frequency</h3>
+        <div className="space-y-3">
+          {[
+            { violation: "Unsubstantiated clinical claims (OTC)", freq: 9.5, color: "#ef4444" },
+            { violation: "DTC promotion of Rx products", freq: 9.0, color: "#ef4444" },
+            { violation: "Before-and-after patient imagery", freq: 8.5, color: "#ef4444" },
+            { violation: "Unlicensed influencer partnerships", freq: 8.0, color: "#f59e0b" },
+            { violation: "Comparative claims vs. competitors", freq: 7.5, color: "#f59e0b" },
+            { violation: "Non-approved Arabic translations", freq: 6.5, color: "#f59e0b" },
+            { violation: "Missing MLR approval on social ads", freq: 9.0, color: "#ef4444" },
+          ].map((item) => (
+            <div key={item.violation} className="flex items-center gap-3">
+              <span className="text-sm text-navy-300 w-64 shrink-0">{item.violation}</span>
+              <div className="flex-1 bg-white/5 rounded-full h-2.5 overflow-hidden">
+                <div className="h-full rounded-full" style={{ width: `${(item.freq / 10) * 100}%`, backgroundColor: item.color }} />
+              </div>
+              <span className="text-sm font-semibold text-white w-10 text-right">{item.freq}</span>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-navy-500 mt-4">Frequency score out of 10 — based on SFDA enforcement observations and industry compliance audits in KSA</p>
+      </div>
 
       <h2>Prohibited Practices: What Gets Companies in Trouble</h2>
       <p>

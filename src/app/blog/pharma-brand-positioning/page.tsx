@@ -37,6 +37,8 @@ export default function PharmaBrandPositioningArticle() {
       category="Digital Marketing"
       slug="pharma-brand-positioning"
       publishedDate="2026-03-26"
+      heroImage="/images/brand-hero-visual.png"
+      heroImageAlt="Pharmaceutical brand positioning strategy framework"
       faqItems={[
         {
           question: "What is brand positioning in the pharmaceutical industry?",
@@ -86,6 +88,20 @@ export default function PharmaBrandPositioningArticle() {
         positioning that works &mdash; for Rx brands targeting physicians, OTC
         brands competing for consumer shelf space, and everything in between.
       </p>
+
+      <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
+        {[
+          { value: "5 Years", label: "Minimum time to build measurable pharmaceutical brand equity" },
+          { value: "3×", label: "Higher prescription loyalty for well-positioned vs. commodity pharma brands" },
+          { value: "40%", label: "Of OTC purchase decisions driven by brand trust over product features" },
+          { value: "1 Message", label: "Brands that win own a single, clear, consistent positioning — not five" },
+        ].map((stat) => (
+          <div key={stat.label} className="bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 rounded-xl p-4 text-center">
+            <div className="text-2xl font-bold text-accent mb-1">{stat.value}</div>
+            <div className="text-xs text-white/60 leading-snug">{stat.label}</div>
+          </div>
+        ))}
+      </div>
 
       <hr />
 
@@ -258,6 +274,31 @@ export default function PharmaBrandPositioningArticle() {
         <li><strong>Regulatory compliance record.</strong> In the GCC market, brands that have never had a compliance action, product recall, or quality issue have a significant trust advantage. This is an invisible asset that only becomes visible when competitors lose it.</li>
         <li><strong>Consistent product quality and availability.</strong> No marketing investment can compensate for a product that is frequently out of stock, has packaging quality issues, or delivers inconsistent clinical outcomes. Brand equity in pharma is ultimately grounded in product performance.</li>
       </ul>
+
+      <div className="not-prose my-8 bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 rounded-2xl p-6">
+        <h3 className="text-base font-semibold text-white mb-1">Pharma Brand Trust Drivers — Relative Impact Score</h3>
+        <p className="text-xs text-white/50 mb-5">How much each factor contributes to brand trust with KSA HCPs and consumers (0–10)</p>
+        <div className="space-y-3">
+          {[
+            { label: "Clinical Evidence Quality", score: 9.5, color: "#00d4b8" },
+            { label: "Consistency of Positioning Over Time", score: 9.0, color: "#00d4b8" },
+            { label: "Pharmacist / HCP Recommendation", score: 8.5, color: "#00d4b8" },
+            { label: "Product Quality & Availability", score: 8.5, color: "#00d4b8" },
+            { label: "Regulatory Compliance Record", score: 8.0, color: "#00d4b8" },
+            { label: "Brand Visual Identity", score: 6.5, color: "#f59e0b" },
+            { label: "Advertising Spend Alone", score: 4.0, color: "#f59e0b" },
+          ].map((item) => (
+            <div key={item.label} className="flex items-center gap-3">
+              <span className="text-xs text-white/70 w-56 shrink-0">{item.label}</span>
+              <div className="flex-1 bg-white/5 rounded-full h-2.5 overflow-hidden">
+                <div className="h-full rounded-full transition-all" style={{ width: `${(item.score / 10) * 100}%`, backgroundColor: item.color }} />
+              </div>
+              <span className="text-xs font-semibold text-white/80 w-8 text-right">{item.score}</span>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-white/30 mt-4">Advertising spend without consistent positioning rarely compounds into brand equity.</p>
+      </div>
 
       <h2>Positioning for a Competitive Pharma Market in KSA</h2>
       <p>

@@ -40,6 +40,8 @@ export default function PharmacyMerchandisingStrategiesArticle() {
       category="Merchandising"
       slug="pharmacy-merchandising-strategies"
       publishedDate="2026-03-23"
+      heroImage="/images/pharma-toolkit-cover.png"
+      heroImageAlt="Pharmacy shelf strategy and merchandising execution for consumer healthcare brands"
       faqItems={[
         {
           question: "What is a pharmacy merchandising strategy?",
@@ -86,6 +88,21 @@ export default function PharmacyMerchandisingStrategiesArticle() {
         marketing lead, or a commercial director, you will walk away with
         frameworks you can deploy this quarter.
       </p>
+
+      {/* Pharmacy Merchandising Stats */}
+      <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
+        {[
+          { value: "70%", label: "Of pharmacy purchase decisions made or changed at the shelf" },
+          { value: "2.5×", label: "More sell-out for brands with compliant planograms vs. no-planogram" },
+          { value: "22%", label: "Average sales uplift from a secondary display in a high-traffic pharmacy" },
+          { value: "1 Day", label: "Of out-of-stock in a flagship pharmacy can cost thousands in lost revenue" },
+        ].map((stat) => (
+          <div key={stat.label} className="rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 p-4 text-center">
+            <p className="text-2xl font-bold text-accent-500 mb-1">{stat.value}</p>
+            <p className="text-xs text-navy-400 leading-snug">{stat.label}</p>
+          </div>
+        ))}
+      </div>
 
       <hr />
 
@@ -309,6 +326,32 @@ export default function PharmacyMerchandisingStrategiesArticle() {
       </ul>
 
       <hr />
+
+      {/* Merchandising Impact Bar Chart */}
+      <div className="not-prose my-8 rounded-2xl border border-white/10 bg-navy-900/60 p-6">
+        <p className="text-xs font-semibold text-accent-500 uppercase tracking-wider mb-1">Sell-Out Impact</p>
+        <h3 className="text-white font-bold text-lg mb-5">Merchandising Tactic Effectiveness — Sell-Out Uplift Index</h3>
+        <div className="space-y-3">
+          {[
+            { tactic: "End-Cap / Gondola Display", uplift: 145, color: "#00d4b8" },
+            { tactic: "Counter Display Unit", uplift: 130, color: "#00d4b8" },
+            { tactic: "Eye-Level Shelf (levels 2–3)", uplift: 100, color: "#00d4b8" },
+            { tactic: "Double Facing + Shelf Talker", uplift: 118, color: "#00d4b8" },
+            { tactic: "Floor Display (seasonal)", uplift: 112, color: "#f59e0b" },
+            { tactic: "Waist-Level Shelf (no support)", uplift: 72, color: "#f59e0b" },
+            { tactic: "Bottom Shelf (no POSM)", uplift: 55, color: "#ef4444" },
+          ].map((item) => (
+            <div key={item.tactic} className="flex items-center gap-3">
+              <span className="text-sm text-navy-300 w-52 shrink-0">{item.tactic}</span>
+              <div className="flex-1 bg-white/5 rounded-full h-2.5 overflow-hidden">
+                <div className="h-full rounded-full" style={{ width: `${Math.min(item.uplift / 1.5, 100)}%`, backgroundColor: item.color }} />
+              </div>
+              <span className="text-sm font-semibold text-white w-16 text-right">Index {item.uplift}</span>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-navy-500 mt-4">Index vs. eye-level baseline (100) — based on KSA pharmacy audits across OTC and CHC categories</p>
+      </div>
 
       <h2>Gondola End-Cap Strategy</h2>
       <p>

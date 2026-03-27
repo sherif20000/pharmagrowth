@@ -178,7 +178,7 @@ export default function HomePage() {
                   className="w-full object-cover"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/20 to-transparent" />
                 {/* Floating stat cards */}
                 <div className="absolute bottom-5 left-5 right-5 flex gap-3">
                   {[

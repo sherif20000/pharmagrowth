@@ -42,6 +42,8 @@ export default function EcommerceHealthcareArticle() {
       category="E-Commerce"
       slug="ecommerce-consumer-healthcare-products"
       publishedDate="2026-03-23"
+      heroImage="/images/pharma-toolkit-cover.png"
+      heroImageAlt="Consumer healthcare products sold through e-commerce platforms in Saudi Arabia"
       faqItems={[
         {
           question: "How do consumer healthcare brands sell online in Saudi Arabia?",
@@ -85,6 +87,21 @@ export default function EcommerceHealthcareArticle() {
         real P&amp;L management, real platform negotiations, and real mistakes
         that cost real money.
       </p>
+
+      {/* E-Commerce Stats */}
+      <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
+        {[
+          { value: "SAR 3B+", label: "KSA consumer healthcare e-commerce market size in 2025" },
+          { value: "35%", label: "Year-on-year growth in online pharmacy sales in Saudi Arabia" },
+          { value: "68%", label: "Of KSA consumers check product reviews online before buying health products" },
+          { value: "4×", label: "Higher conversion rate for products with A+ content vs. basic listings" },
+        ].map((stat) => (
+          <div key={stat.label} className="rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 p-4 text-center">
+            <p className="text-2xl font-bold text-accent-500 mb-1">{stat.value}</p>
+            <p className="text-xs text-navy-400 leading-snug">{stat.label}</p>
+          </div>
+        ))}
+      </div>
 
       <hr />
 
@@ -316,6 +333,34 @@ export default function EcommerceHealthcareArticle() {
       </div>
 
       <hr />
+
+      {/* E-Commerce Channel Performance Chart */}
+      <div className="not-prose my-8 rounded-2xl border border-white/10 bg-navy-900/60 p-6">
+        <p className="text-xs font-semibold text-accent-500 uppercase tracking-wider mb-1">Platform Benchmark</p>
+        <h3 className="text-white font-bold text-lg mb-5">E-Commerce Channel Performance for Consumer Healthcare in KSA</h3>
+        <div className="space-y-3">
+          {[
+            { channel: "Nahdi Online (e-pharmacy)", score: 9.5, note: "Highest healthcare trust" },
+            { channel: "Amazon.sa", score: 9.0, note: "Broadest reach, fast logistics" },
+            { channel: "Al-Dawaa Digital", score: 8.5, note: "Strong Rx/OTC category" },
+            { channel: "Noon.com", score: 7.5, note: "Growing health & beauty" },
+            { channel: "Brand-owned D2C", score: 7.0, note: "Margin-rich, harder to scale" },
+            { channel: "WhatsApp Commerce", score: 5.5, note: "High conversion, low reach" },
+          ].map((item) => (
+            <div key={item.channel} className="flex items-center gap-3">
+              <div className="w-52 shrink-0">
+                <span className="text-sm text-navy-300 block">{item.channel}</span>
+                <span className="text-xs text-navy-500">{item.note}</span>
+              </div>
+              <div className="flex-1 bg-white/5 rounded-full h-2.5 overflow-hidden">
+                <div className="h-full rounded-full bg-accent-500" style={{ width: `${(item.score / 10) * 100}%` }} />
+              </div>
+              <span className="text-sm font-semibold text-white w-10 text-right">{item.score}</span>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-navy-500 mt-4">Score out of 10 — based on healthcare category suitability, logistics reliability, and consumer trust in KSA</p>
+      </div>
 
       <h2>Building Your E-Commerce Strategy: D2C vs Marketplace vs E-Retailer</h2>
       <p>

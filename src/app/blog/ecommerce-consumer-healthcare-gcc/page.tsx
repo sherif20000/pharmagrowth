@@ -40,6 +40,8 @@ export default function EcommerceConsumerHealthcareGCCArticle() {
       category="E-Commerce"
       slug="ecommerce-consumer-healthcare-gcc"
       publishedDate="2026-03-23"
+      heroImage="/images/pharma-toolkit-cover.png"
+      heroImageAlt="Consumer healthcare e-commerce growth in GCC markets including Saudi Arabia and UAE"
       faqItems={[
         {
           question: "What is the size of the consumer healthcare e-commerce market in the GCC?",
@@ -86,6 +88,21 @@ export default function EcommerceConsumerHealthcareGCCArticle() {
         platforms, and solving real supply chain problems for health products
         sold online.
       </p>
+
+      {/* GCC E-Commerce Stats */}
+      <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
+        {[
+          { value: "SAR 4.5B+", label: "KSA online pharmacy & consumer healthcare market in 2025" },
+          { value: "28%", label: "Year-over-year growth in GCC consumer healthcare e-commerce" },
+          { value: "10–20%", label: "Typical marketplace commission on consumer healthcare GMV" },
+          { value: "4×", label: "Conversion rate lift from A+ content vs. basic product listings" },
+        ].map((stat) => (
+          <div key={stat.label} className="rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 p-4 text-center">
+            <p className="text-2xl font-bold text-accent-500 mb-1">{stat.value}</p>
+            <p className="text-xs text-navy-400 leading-snug">{stat.label}</p>
+          </div>
+        ))}
+      </div>
 
       <hr />
 
@@ -175,6 +192,34 @@ export default function EcommerceConsumerHealthcareGCCArticle() {
       </div>
 
       <hr />
+
+      {/* GCC E-Commerce Platform Bar Chart */}
+      <div className="not-prose my-8 rounded-2xl border border-white/10 bg-navy-900/60 p-6">
+        <p className="text-xs font-semibold text-accent-500 uppercase tracking-wider mb-1">Platform Benchmark</p>
+        <h3 className="text-white font-bold text-lg mb-5">E-Commerce Platform Suitability for Consumer Healthcare — GCC</h3>
+        <div className="space-y-3">
+          {[
+            { platform: "Nahdi Online (KSA)", score: 9.5, note: "Largest e-pharmacy by traffic" },
+            { platform: "Amazon.sa", score: 9.0, note: "Highest Prime penetration" },
+            { platform: "Al-Dawaa Digital", score: 8.5, note: "Strong Rx/OTC trust" },
+            { platform: "Noon Health (UAE/KSA)", score: 7.5, note: "Growing health vertical" },
+            { platform: "Aster Online (UAE)", score: 7.0, note: "UAE-focused e-pharmacy" },
+            { platform: "Brand D2C Website", score: 6.5, note: "Best margins, slower scale" },
+          ].map((item) => (
+            <div key={item.platform} className="flex items-center gap-3">
+              <div className="w-52 shrink-0">
+                <span className="text-sm text-navy-300 block">{item.platform}</span>
+                <span className="text-xs text-navy-500">{item.note}</span>
+              </div>
+              <div className="flex-1 bg-white/5 rounded-full h-2.5 overflow-hidden">
+                <div className="h-full rounded-full bg-accent-500" style={{ width: `${(item.score / 10) * 100}%` }} />
+              </div>
+              <span className="text-sm font-semibold text-white w-10 text-right">{item.score}</span>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-navy-500 mt-4">Score out of 10 — based on healthcare suitability, consumer trust, logistics, and regulatory compliance readiness</p>
+      </div>
 
       <h2>The Platform Landscape: Where to Sell</h2>
       <p>

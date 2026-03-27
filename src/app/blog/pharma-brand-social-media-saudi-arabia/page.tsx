@@ -34,6 +34,8 @@ export default function SocialMediaKSAArticle() {
       category="Strategy"
       slug="pharma-brand-social-media-saudi-arabia"
       publishedDate="2026-03-23"
+      heroImage="/images/pharma-marketing-team.png"
+      heroImageAlt="Pharmaceutical marketing team building social media strategy in Saudi Arabia"
       faqItems={[
         {
           question: "Can pharmaceutical companies advertise on social media in Saudi Arabia?",
@@ -77,6 +79,21 @@ export default function SocialMediaKSAArticle() {
         their time between face-to-face meetings and at least two digital
         channels.
       </p>
+      {/* KSA Social Media Stats */}
+      <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
+        {[
+          { value: "34.1M", label: "Social media user identities in Saudi Arabia" },
+          { value: "99.6%", label: "Population penetration — highest in G20" },
+          { value: "21M+", label: "Snapchat users in KSA — #1 globally per capita" },
+          { value: "50%+", label: "HCPs using hybrid digital + in-person engagement" },
+        ].map((stat) => (
+          <div key={stat.label} className="rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 p-4 text-center">
+            <p className="text-2xl font-bold text-accent-500 mb-1">{stat.value}</p>
+            <p className="text-xs text-navy-400 leading-snug">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+
       <p>
         Three macro forces have made pharma social media marketing in Saudi
         Arabia not just viable but essential:
@@ -204,6 +221,34 @@ export default function SocialMediaKSAArticle() {
             </tr>
           </tbody>
         </table>
+      </div>
+
+      {/* Platform Effectiveness for KSA Pharma Bar Chart */}
+      <div className="not-prose my-8 rounded-2xl border border-white/10 bg-navy-900/60 p-6">
+        <p className="text-xs font-semibold text-accent-500 uppercase tracking-wider mb-1">KSA Pharma Rating</p>
+        <h3 className="text-white font-bold text-lg mb-5">Platform Effectiveness for Pharma Marketing in Saudi Arabia</h3>
+        <div className="space-y-3">
+          {[
+            { platform: "Snapchat (Consumer)", score: 9.5, note: "OTC & CHC brands" },
+            { platform: "Instagram", score: 9.0, note: "OTC, dermo-cosmetics" },
+            { platform: "LinkedIn", score: 9.0, note: "HCP & B2B engagement" },
+            { platform: "TikTok", score: 7.5, note: "Under-35 consumers" },
+            { platform: "YouTube", score: 7.0, note: "Long-form health content" },
+            { platform: "X / Twitter", score: 5.0, note: "Limited pharma traction" },
+          ].map((item) => (
+            <div key={item.platform} className="flex items-center gap-3">
+              <div className="w-44 shrink-0">
+                <span className="text-sm text-navy-300 block">{item.platform}</span>
+                <span className="text-xs text-navy-500">{item.note}</span>
+              </div>
+              <div className="flex-1 bg-white/5 rounded-full h-2.5 overflow-hidden">
+                <div className="h-full rounded-full bg-accent-500" style={{ width: `${(item.score / 10) * 100}%` }} />
+              </div>
+              <span className="text-sm font-semibold text-white w-10 text-right">{item.score}</span>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-navy-500 mt-4">Score out of 10 — based on KSA user penetration, pharma content suitability, and SFDA compliance ease</p>
       </div>
 
       <h3>Instagram: The Workhorse for OTC and Consumer Healthcare</h3>
