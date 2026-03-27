@@ -116,13 +116,13 @@ const freeResources = [
     title: "Pharma Marketing Plan Template",
     description: "A complete, structured template for building a brand marketing plan for KSA and the GCC. Covers brand snapshot, SWOT, channel plan, budget, activity calendar, and KPIs.",
     format: "PDF · Fillable template",
-    href: "https://pharmagrowth.gumroad.com/l/pharma-marketing-plan-template",
+    href: "https://sherifelkady.gumroad.com/l/PharmaMarketingPlanTemplate",
   },
   {
     title: "Pharma Campaign Brief Template",
     description: "Brief any campaign cleanly — from objective to launch. Includes channel plan, key message framework, approval sign-off, and a launch checklist built for pharma.",
     format: "PDF · Fillable template",
-    href: "https://pharmagrowth.gumroad.com/l/pharma-campaign-brief-template",
+    href: "https://sherifelkady.gumroad.com/l/CampaignBriefTemplate",
   },
 ];
 
