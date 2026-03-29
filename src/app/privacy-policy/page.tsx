@@ -3,6 +3,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy | PharmaGrowth",
   description: "How PharmaGrowth collects, uses, and protects your personal information.",
+  alternates: { canonical: "/privacy-policy" },
+  openGraph: {
+    title: "Privacy Policy | PharmaGrowth",
+    description: "How PharmaGrowth collects, uses, and protects your personal information.",
+    images: [{ url: "/images/sherif-speaking.png", width: 800, height: 600 }],
+  },
 };
 
 export default function PrivacyPolicyPage() {

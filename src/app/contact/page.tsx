@@ -5,9 +5,11 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Get in touch with PharmaGrowth. Contact us for coaching inquiries, partnership opportunities, or general questions about pharma marketing training.",
+  alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact | PharmaGrowth",
     description: "Get in touch for coaching, partnerships, or general inquiries.",
+    images: [{ url: "/images/sherif-speaking.png", width: 800, height: 600 }],
   },
 };
 

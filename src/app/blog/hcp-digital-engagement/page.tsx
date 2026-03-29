@@ -2,15 +2,17 @@ import type { Metadata } from "next";
 import ArticleLayout from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
-  title: "HCP Digital Engagement: How to Reach Doctors Online Without Breaking Compliance (2026)",
+  title: "HCP Digital Engagement for Pharma Marketers (2026)",
   description:
-    "A practical guide to HCP digital engagement strategies for pharmaceutical marketing teams. Covers approved digital channels, compliant content formats, CRM integration, and how to measure HCP engagement without violating SFDA or industry codes.",
+    "Practical guide to HCP digital engagement for pharma marketing teams. Covers approved channels, compliant content formats, CRM integration, and measurement frameworks for KSA.",
+  alternates: { canonical: "/blog/hcp-digital-engagement" },
   openGraph: {
-    title: "HCP Digital Engagement: How to Reach Doctors Online Without Breaking Compliance (2026)",
+    title: "HCP Digital Engagement for Pharma Marketers (2026)",
     description:
       "Practical guide to digital HCP engagement for pharma marketers. Approved channels, compliant content, CRM integration, and measurement frameworks for KSA and GCC markets.",
     type: "article",
     authors: ["Sherif Al-Kady"],
+    images: [{ url: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=630&fit=crop", width: 1200, height: 630 }],
   },
   keywords: [
     "HCP digital engagement strategy",
@@ -37,7 +39,7 @@ export default function HcpDigitalEngagementArticle() {
       category="Digital Marketing"
       slug="hcp-digital-engagement"
       publishedDate="2026-03-26"
-      heroImage="/images/blog-hero-hcp-digital.png"
+      heroImage="/images/blog-hero-hcp-digital.jpg"
       heroImageAlt="Pharmaceutical marketing team discussing HCP digital engagement strategy"
       faqItems={[
         {

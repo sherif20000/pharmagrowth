@@ -6,9 +6,16 @@ import SectionHeading from "@/components/SectionHeading";
 import TestimonialCard from "@/components/TestimonialCard";
 
 export const metadata: Metadata = {
-  title: "PharmaGrowth | Master Pharma Marketing. Accelerate Your Career.",
+  title: "PharmaGrowth | Pharma Marketing for GCC Professionals",
   description:
-    "Join 5,000+ pharma professionals mastering digital marketing through community, coaching, and courses. Led by Sherif Al-Kady with 20+ years in pharma marketing across GCC.",
+    "Community, coaching, and courses for pharma marketing professionals in GCC. Learn from Sherif Al-Kady with 20+ years in pharma marketing.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "PharmaGrowth | Pharma Marketing for GCC Professionals",
+    description:
+      "Community, coaching, and courses for pharma marketing professionals in GCC.",
+    images: [{ url: "/images/sherif-speaking.png", width: 800, height: 600 }],
+  },
 };
 
 const stats = [
@@ -174,7 +181,7 @@ export default function HomePage() {
             <div className="hidden lg:block">
               <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                 <Image
-                  src="/images/brand-hero-visual.png"
+                  src="/images/brand-hero-visual.jpg"
                   alt="PharmaGrowth — pharma marketing intelligence platform"
                   width={800}
                   height={600}
@@ -237,7 +244,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
           <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
             <Image
-              src="/images/pharma-marketing-team.png"
+              src="/images/pharma-marketing-team.jpg"
               alt="Pharma marketing strategy session — PharmaGrowth coaching"
               width={1400}
               height={600}

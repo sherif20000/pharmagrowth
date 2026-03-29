@@ -3,17 +3,17 @@ import Link from "next/link";
 import ArticleLayout from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
-  title:
-    "E-Commerce for Consumer Healthcare Products: The Complete KSA Playbook (2026)",
+  title: "Consumer Healthcare E-Commerce: KSA Playbook",
   description:
-    "The definitive playbook for selling consumer healthcare products online in Saudi Arabia. Covers marketplace strategy, product listing optimization, digital shelf management, e-retailer activations, last-mile logistics, and e-commerce KPIs from 20+ years in pharma.",
+    "Playbook for consumer healthcare e-commerce in Saudi Arabia. Marketplace strategy, product listing optimization, digital shelf management, and e-retailer activations.",
+  alternates: { canonical: "/blog/ecommerce-consumer-healthcare-products" },
   openGraph: {
-    title:
-      "E-Commerce for Consumer Healthcare Products: The Complete KSA Playbook (2026)",
+    title: "Consumer Healthcare E-Commerce: KSA Playbook",
     description:
       "The definitive playbook for selling consumer healthcare products online in Saudi Arabia. Covers marketplace strategy, product listing optimization, digital shelf management, and e-retailer activations.",
     type: "article",
     authors: ["Sherif Al-Kady"],
+    images: [{ url: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&h=630&fit=crop", width: 1200, height: 630 }],
   },
   keywords: [
     "ecommerce consumer healthcare KSA",
@@ -42,7 +42,7 @@ export default function EcommerceHealthcareArticle() {
       category="E-Commerce"
       slug="ecommerce-consumer-healthcare-products"
       publishedDate="2026-03-23"
-      heroImage="/images/blog-hero-ecommerce-chc.png"
+      heroImage="/images/blog-hero-ecommerce-chc.jpg"
       heroImageAlt="Consumer healthcare products sold through e-commerce platforms in Saudi Arabia"
       faqItems={[
         {

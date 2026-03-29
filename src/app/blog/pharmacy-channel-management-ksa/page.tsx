@@ -2,15 +2,17 @@ import type { Metadata } from "next";
 import ArticleLayout from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
-  title: "Pharmacy Channel Management in Saudi Arabia: A Complete Guide for Pharma Brand Teams (2026)",
+  title: "Pharmacy Channel Management in Saudi Arabia",
   description:
-    "A practical guide to managing the pharmacy channel in Saudi Arabia. Covers the KSA pharmacy landscape, key account management for Nahdi and Al-Dawaa, sell-in vs. sell-out dynamics, listing fees, distribution strategy, and pharmacy activation programs.",
+    "A practical guide to pharmacy channel management in Saudi Arabia. KSA pharmacy landscape, key account management, sell-in dynamics, listing fees, and pharmacy activation.",
+  alternates: { canonical: "/blog/pharmacy-channel-management-ksa" },
   openGraph: {
-    title: "Pharmacy Channel Management in Saudi Arabia: A Complete Guide for Pharma Brand Teams (2026)",
+    title: "Pharmacy Channel Management in Saudi Arabia",
     description:
       "Pharmacy channel management in KSA: landscape overview, key account management, sell-in strategy, listing fees, and pharmacy activation for pharma and OTC brands.",
     type: "article",
     authors: ["Sherif Al-Kady"],
+    images: [{ url: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1200&h=630&fit=crop", width: 1200, height: 630 }],
   },
   keywords: [
     "pharmacy channel management KSA",
@@ -37,7 +39,7 @@ export default function PharmacyChannelManagementArticle() {
       category="Trade Marketing"
       slug="pharmacy-channel-management-ksa"
       publishedDate="2026-03-27"
-      heroImage="/images/blog-hero-pharmacy-channel.png"
+      heroImage="/images/blog-hero-pharmacy-channel.jpg"
       heroImageAlt="Pharmacy channel management tools and strategy for KSA pharma brands"
       faqItems={[
         {

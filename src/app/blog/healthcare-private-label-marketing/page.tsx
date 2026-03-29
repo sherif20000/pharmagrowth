@@ -2,17 +2,17 @@ import type { Metadata } from "next";
 import ArticleLayout from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
-  title:
-    "Healthcare Private Label Marketing: How Pharmacy Chains Are Reshaping the OTC Landscape in the Middle East",
+  title: "Private Label in GCC Pharmacies: OTC Guide",
   description:
-    "An expert analysis of private label strategy in GCC pharmacy chains. Covers Nahdi, Al-Dawaa, and Whites own-brand growth, branded pharma defense tactics, co-manufacturing dynamics, and pricing strategy from 20+ years in the field.",
+    "Expert analysis of private label strategy in GCC pharmacy chains. Covers Nahdi and Al-Dawaa own-brand growth, branded pharma defense tactics, and co-manufacturing.",
+  alternates: { canonical: "/blog/healthcare-private-label-marketing" },
   openGraph: {
-    title:
-      "Healthcare Private Label Marketing: How Pharmacy Chains Are Reshaping the OTC Landscape in the Middle East",
+    title: "Private Label in GCC Pharmacies: OTC Guide",
     description:
       "How pharmacy own-brand products are disrupting OTC categories in KSA and the Gulf. Strategies for branded pharma to compete against private label.",
     type: "article",
     authors: ["Sherif Al-Kady"],
+    images: [{ url: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1200&h=630&fit=crop", width: 1200, height: 630 }],
   },
   keywords: [
     "healthcare private label",
@@ -39,7 +39,7 @@ export default function HealthcarePrivateLabelMarketingArticle() {
       category="Private Label"
       slug="healthcare-private-label-marketing"
       publishedDate="2026-03-23"
-      heroImage="/images/blog-hero-healthcare-private-label.png"
+      heroImage="/images/blog-hero-healthcare-private-label.jpg"
       heroImageAlt="Branded versus private label healthcare products competing on pharmacy shelves in GCC"
       faqItems={[
         {

@@ -6,10 +6,12 @@ import StatBar from "@/components/StatBar";
 export const metadata: Metadata = {
   title: "About Sherif Al-Kady",
   description:
-    "Meet Sherif Al-Kady, MBA -- 20+ years of pharma marketing leadership across Egypt and GCC. Founder of PharmaGrowth, the leading pharma marketing education platform.",
+    "Meet Sherif Al-Kady, MBA — 20+ years pharma marketing leadership across Egypt and GCC. Founder of PharmaGrowth education platform.",
+  alternates: { canonical: "/about" },
   openGraph: {
     title: "About Sherif Al-Kady | PharmaGrowth",
     description: "20+ years of pharma marketing leadership. 80+ brands managed. $500K+ ad spend optimized.",
+    images: [{ url: "/images/sherif-speaking.png", width: 800, height: 600 }],
   },
 };
 

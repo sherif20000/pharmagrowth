@@ -3,17 +3,17 @@ import Link from "next/link";
 import ArticleLayout from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
-  title:
-    "Trade Marketing in the Pharmaceutical Industry: A Complete Guide for 2026",
+  title: "Trade Marketing in Pharma: Complete Guide 2026",
   description:
-    "A comprehensive guide to trade marketing in the pharmaceutical industry for 2026. Covers channel strategy, trade promotions, in-store execution, digital shelf management, pharmacy chain partnerships in KSA, and ROI measurement from 20+ years of regional experience.",
+    "Pharma trade marketing guide for 2026. Channel strategy, trade promotions, in-store execution, and pharmacy chain partnerships in KSA markets.",
+  alternates: { canonical: "/blog/trade-marketing-pharmaceutical-industry" },
   openGraph: {
-    title:
-      "Trade Marketing in the Pharmaceutical Industry: A Complete Guide for 2026",
+    title: "Trade Marketing in Pharma: Complete Guide 2026",
     description:
-      "A comprehensive guide to trade marketing in the pharmaceutical industry for 2026. Covers channel strategy, trade promotions, in-store execution, digital shelf management, and pharmacy chain partnerships in KSA.",
+      "A comprehensive guide to trade marketing in the pharmaceutical industry for 2026. Covers channel strategy, trade promotions, in-store execution, and pharmacy chain partnerships in KSA.",
     type: "article",
     authors: ["Sherif Al-Kady"],
+    images: [{ url: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=630&fit=crop", width: 1200, height: 630 }],
   },
   keywords: [
     "trade marketing pharmaceutical industry",
@@ -42,7 +42,7 @@ export default function TradeMarketingArticle() {
       category="Trade Marketing"
       slug="trade-marketing-pharmaceutical-industry"
       publishedDate="2026-03-23"
-      heroImage="/images/blog-hero-trade-marketing.png"
+      heroImage="/images/blog-hero-trade-marketing.jpg"
       heroImageAlt="Pharmaceutical trade marketing team managing pharmacy channel strategy"
       faqItems={[
         {

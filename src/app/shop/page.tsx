@@ -6,10 +6,12 @@ import SectionHeading from "@/components/SectionHeading";
 export const metadata: Metadata = {
   title: "Shop",
   description:
-    "Digital products for pharma marketers. The Claude AI Skills Pack gives you 11 ready-to-install AI skills for campaign planning, brand launch, trade marketing, and more.",
+    "Digital products for pharma marketers — AI skills packs, prompt packs, and toolkits built specifically for pharma marketing professionals.",
+  alternates: { canonical: "/shop" },
   openGraph: {
     title: "Shop | PharmaGrowth",
     description: "Digital products for pharma marketers — starting with the Claude AI Skills Pack at $49.",
+    images: [{ url: "/images/claude-skills-pack-cover.jpg", width: 800, height: 600 }],
   },
 };
 
@@ -21,7 +23,7 @@ const productTeasers = [
     badge: "Coming Soon",
     gradient: "from-navy-800 via-accent-600/20 to-navy-900",
     href: null,
-    image: "/images/chatgpt-prompt-pack-cover.png",
+    image: "/images/chatgpt-prompt-pack-cover.jpg",
   },
   {
     title: "Claude AI Skills Pack: Pharma Marketers Edition",
@@ -30,7 +32,7 @@ const productTeasers = [
     badge: "Available Now",
     gradient: "from-navy-800 via-white/5 to-navy-900",
     href: "https://sherifelkady.gumroad.com/l/pharmagrowth",
-    image: "/images/claude-skills-pack-cover.png",
+    image: "/images/claude-skills-pack-cover.jpg",
   },
   {
     title: "Complete Pharma Marketing Toolkit",
@@ -39,7 +41,7 @@ const productTeasers = [
     badge: "Coming Soon",
     gradient: "from-navy-900 via-accent-600/10 to-navy-800",
     href: null,
-    image: "/images/pharma-toolkit-cover.png",
+    image: "/images/pharma-toolkit-cover.jpg",
   },
 ];
 
@@ -129,7 +131,7 @@ export default function ShopPage() {
               <div className="relative aspect-[4/3] lg:aspect-auto overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-navy-800/50 via-white/5 to-navy-900/50" />
                 <Image
-                  src="/images/claude-skills-pack-cover.png"
+                  src="/images/claude-skills-pack-cover.jpg"
                   alt="Claude AI Skills Pack: Pharma Marketers Edition"
                   fill
                   className="object-cover opacity-80 mix-blend-luminosity"

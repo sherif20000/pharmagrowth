@@ -3,17 +3,17 @@ import Link from "next/link";
 import ArticleLayout from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
-  title:
-    "Pharmacy Merchandising Strategies That Drive Sell-Out: A Field Guide for Pharma Brands",
+  title: "Pharmacy Merchandising Strategies Guide",
   description:
-    "A comprehensive field guide to pharmacy merchandising for pharma brands in KSA and GCC. Covers planogram strategy, shelf placement hierarchy, POSM, digital shelf optimization, and a practical audit checklist from 20+ years in pharma.",
+    "Field guide to pharmacy merchandising for pharma brands in KSA. Planogram strategy, shelf placement, POSM, digital shelf optimization, and a practical audit checklist.",
+  alternates: { canonical: "/blog/pharmacy-merchandising-strategies" },
   openGraph: {
-    title:
-      "Pharmacy Merchandising Strategies That Drive Sell-Out: A Field Guide for Pharma Brands",
+    title: "Pharmacy Merchandising Strategies Guide",
     description:
       "A comprehensive field guide to pharmacy merchandising for pharma brands. Covers planogram strategy, shelf placement, POSM, digital shelf, and a practical audit checklist.",
     type: "article",
     authors: ["Sherif Al-Kady"],
+    images: [{ url: "https://images.unsplash.com/photo-1604881988758-f76ad2f7aac1?w=1200&h=630&fit=crop", width: 1200, height: 630 }],
   },
   keywords: [
     "pharmacy merchandising",
@@ -40,7 +40,7 @@ export default function PharmacyMerchandisingStrategiesArticle() {
       category="Merchandising"
       slug="pharmacy-merchandising-strategies"
       publishedDate="2026-03-23"
-      heroImage="/images/blog-hero-pharmacy-merchandising.png"
+      heroImage="/images/blog-hero-pharmacy-merchandising.jpg"
       heroImageAlt="Pharmacy shelf strategy and merchandising execution for consumer healthcare brands"
       faqItems={[
         {

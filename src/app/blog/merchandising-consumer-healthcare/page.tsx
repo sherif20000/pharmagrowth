@@ -3,17 +3,17 @@ import Link from "next/link";
 import ArticleLayout from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
-  title:
-    "Merchandising for Consumer Healthcare: How to Win at the Pharmacy Shelf",
+  title: "Consumer Healthcare Merchandising Guide",
   description:
-    "A practical guide to merchandising consumer healthcare products in KSA and GCC pharmacies. Covers shelf placement science, planogram strategy, POSM, Nahdi and Al-Dawaa standards, digital shelf, audits, and category management from 20+ years of pharma experience.",
+    "A practical guide to consumer healthcare merchandising in KSA pharmacies. Shelf placement, planogram strategy, POSM, digital shelf, and category management.",
+  alternates: { canonical: "/blog/merchandising-consumer-healthcare" },
   openGraph: {
-    title:
-      "Merchandising for Consumer Healthcare: How to Win at the Pharmacy Shelf",
+    title: "Consumer Healthcare Merchandising Guide",
     description:
       "A practical guide to merchandising consumer healthcare products in KSA and GCC pharmacies. Covers shelf placement, planogram strategy, POSM, digital shelf, and category management.",
     type: "article",
     authors: ["Sherif Al-Kady"],
+    images: [{ url: "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1200&h=630&fit=crop", width: 1200, height: 630 }],
   },
   keywords: [
     "consumer healthcare merchandising",
@@ -40,7 +40,7 @@ export default function MerchandisingArticle() {
       category="Merchandising"
       slug="merchandising-consumer-healthcare"
       publishedDate="2026-03-23"
-      heroImage="/images/blog-hero-merchandising-chc.png"
+      heroImage="/images/blog-hero-merchandising-chc.jpg"
       heroImageAlt="Consumer healthcare products on pharmacy shelf showing merchandising strategy"
       faqItems={[
         {

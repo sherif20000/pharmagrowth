@@ -6,9 +6,11 @@ export const metadata: Metadata = {
   title: "Blog",
   description:
     "Expert insights on pharma digital marketing, AI marketing, brand building, and career growth. Actionable strategies for healthcare marketing professionals.",
+  alternates: { canonical: "/blog" },
   openGraph: {
     title: "Blog | PharmaGrowth",
     description: "Pharma marketing insights, strategies, and career advice.",
+    images: [{ url: "/images/sherif-speaking.png", width: 800, height: 600 }],
   },
 };
 

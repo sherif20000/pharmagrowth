@@ -2,15 +2,17 @@ import type { Metadata } from "next";
 import ArticleLayout from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
-  title: "SFDA Marketing Compliance: What Every Pharma Brand Manager Must Know (2026)",
+  title: "SFDA Marketing Compliance Guide (2026)",
   description:
-    "A practical guide to SFDA marketing regulations for pharmaceutical and consumer healthcare brands in Saudi Arabia. Covers what is allowed, what is prohibited, the MLR process, social media rules, and how to build a compliant marketing team.",
+    "A practical guide to SFDA marketing regulations in Saudi Arabia. Covers what is allowed, the MLR process, social media rules, and how to build a compliant marketing team.",
+  alternates: { canonical: "/blog/sfda-marketing-compliance" },
   openGraph: {
-    title: "SFDA Marketing Compliance: What Every Pharma Brand Manager Must Know (2026)",
+    title: "SFDA Marketing Compliance Guide (2026)",
     description:
       "Practical guide to SFDA marketing regulations for pharma and CHC brands in Saudi Arabia. What is allowed, what is prohibited, social media rules, and how to build a compliant marketing function.",
     type: "article",
     authors: ["Sherif Al-Kady"],
+    images: [{ url: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=630&fit=crop", width: 1200, height: 630 }],
   },
   keywords: [
     "SFDA marketing compliance",
@@ -37,7 +39,7 @@ export default function SFDAMarketingComplianceArticle() {
       category="Regulatory & Compliance"
       slug="sfda-marketing-compliance"
       publishedDate="2026-03-26"
-      heroImage="/images/blog-hero-sfda-compliance.png"
+      heroImage="/images/blog-hero-sfda-compliance.jpg"
       heroImageAlt="SFDA regulatory compliance framework for pharmaceutical marketing in Saudi Arabia"
       faqItems={[
         {

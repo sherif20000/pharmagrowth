@@ -3,15 +3,17 @@ import Link from "next/link";
 import ArticleLayout from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
-  title: "The Complete Guide to Digital Marketing for Pharmaceutical Companies (2026)",
+  title: "Pharma Digital Marketing Guide (2026)",
   description:
-    "A proven framework for pharma digital marketing in 2026. Covers 7 core channels, SFDA/FDA compliance, GCC case studies, and actionable strategy from 20+ years in pharma.",
+    "A proven framework for pharma digital marketing. Covers 7 core channels, SFDA/FDA compliance, GCC case studies, and actionable strategy from 20+ years in pharma.",
+  alternates: { canonical: "/blog/digital-marketing-pharmaceutical-companies" },
   openGraph: {
-    title: "The Complete Guide to Digital Marketing for Pharmaceutical Companies (2026)",
+    title: "Pharma Digital Marketing Guide (2026)",
     description:
       "A proven framework for pharma digital marketing in 2026. Covers 7 core channels, SFDA/FDA compliance, GCC case studies, and actionable strategy.",
     type: "article",
     authors: ["Sherif Al-Kady"],
+    images: [{ url: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=630&fit=crop", width: 1200, height: 630 }],
   },
   keywords: [
     "digital marketing for pharmaceutical companies",
@@ -37,7 +39,7 @@ export default function DigitalMarketingPharmaArticle() {
       category="Digital Marketing"
       slug="digital-marketing-pharmaceutical-companies"
       publishedDate="2026-03-23"
-      heroImage="/images/blog-hero-digital-marketing-pharma.png"
+      heroImage="/images/blog-hero-digital-marketing-pharma.jpg"
       heroImageAlt="Pharma digital marketing dashboard showing campaign analytics and brand metrics"
       faqItems={[
         {

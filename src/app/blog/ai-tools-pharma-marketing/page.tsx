@@ -3,15 +3,17 @@ import Link from "next/link";
 import ArticleLayout from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
-  title: "10 AI Tools Every Pharma Marketer Should Use in 2026",
+  title: "10 AI Tools for Pharma Marketing (2026)",
   description:
-    "Discover the best AI tools for pharma marketing in 2026. Expert-tested guide covering Claude, ChatGPT, Perplexity, Canva, Gamma, HubSpot, GA4, and more for regulated industries.",
+    "The best AI tools for pharma marketing in 2026. Expert-tested guide covering Claude, ChatGPT, Canva, HubSpot, GA4, and more for regulated industries.",
+  alternates: { canonical: "/blog/ai-tools-pharma-marketing" },
   openGraph: {
-    title: "10 AI Tools Every Pharma Marketer Should Use in 2026",
+    title: "10 AI Tools for Pharma Marketing (2026)",
     description:
       "Discover the 10 best AI tools for pharma marketing in 2026. Expert-tested picks for content, research, design, CRM, analytics, and compliance-safe marketing at scale.",
     type: "article",
     authors: ["PharmaGrowth Team"],
+    images: [{ url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=630&fit=crop", width: 1200, height: 630 }],
   },
   keywords: [
     "AI tools pharma marketing",
@@ -38,7 +40,7 @@ export default function AIToolsPharmaArticle() {
       category="AI & Technology"
       slug="ai-tools-pharma-marketing"
       publishedDate="2026-03-23"
-      heroImage="/images/blog-hero-ai-tools-pharma.png"
+      heroImage="/images/blog-hero-ai-tools-pharma.jpg"
       heroImageAlt="AI tools dashboard for pharmaceutical marketing teams"
       faqItems={[
         {

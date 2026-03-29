@@ -3,15 +3,17 @@ import Link from "next/link";
 import ArticleLayout from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
-  title: "E-Commerce for Consumer Healthcare Products: How to Win Online in the GCC Market (2026)",
+  title: "Consumer Healthcare E-Commerce in GCC (2026)",
   description:
-    "A comprehensive guide to building and scaling e-commerce for consumer healthcare brands in the GCC. Covers marketplace strategy, e-pharmacy regulations, pricing, digital shelf optimization, and P&L modeling from 20+ years in pharma.",
+    "Guide to e-commerce for consumer healthcare brands in the GCC. Marketplace strategy, e-pharmacy regulations, pricing, digital shelf optimization, and P&L modeling.",
+  alternates: { canonical: "/blog/ecommerce-consumer-healthcare-gcc" },
   openGraph: {
-    title: "E-Commerce for Consumer Healthcare Products: How to Win Online in the GCC Market (2026)",
+    title: "Consumer Healthcare E-Commerce in GCC (2026)",
     description:
       "A comprehensive guide to building and scaling e-commerce for consumer healthcare brands in the GCC. Covers marketplace strategy, e-pharmacy regulations, pricing, and digital shelf optimization.",
     type: "article",
     authors: ["Sherif Al-Kady"],
+    images: [{ url: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=630&fit=crop", width: 1200, height: 630 }],
   },
   keywords: [
     "ecommerce consumer healthcare",
@@ -40,7 +42,7 @@ export default function EcommerceConsumerHealthcareGCCArticle() {
       category="E-Commerce"
       slug="ecommerce-consumer-healthcare-gcc"
       publishedDate="2026-03-23"
-      heroImage="/images/blog-hero-ecommerce-gcc.png"
+      heroImage="/images/blog-hero-ecommerce-gcc.jpg"
       heroImageAlt="Consumer healthcare e-commerce growth in GCC markets including Saudi Arabia and UAE"
       faqItems={[
         {

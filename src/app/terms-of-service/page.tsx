@@ -3,6 +3,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service | PharmaGrowth",
   description: "Terms and conditions for using the PharmaGrowth platform and content.",
+  alternates: { canonical: "/terms-of-service" },
+  openGraph: {
+    title: "Terms of Service | PharmaGrowth",
+    description: "Terms and conditions for using the PharmaGrowth platform and content.",
+    images: [{ url: "/images/sherif-speaking.png", width: 800, height: 600 }],
+  },
 };
 
 export default function TermsOfServicePage() {

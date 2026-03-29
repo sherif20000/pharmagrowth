@@ -3,15 +3,17 @@ import Link from "next/link";
 import ArticleLayout from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
-  title: "How to Build a Pharmaceutical Brand on Social Media in Saudi Arabia",
+  title: "Pharma Brand on Social Media in Saudi Arabia",
   description:
-    "A field-tested guide to pharma social media marketing in Saudi Arabia — covering SFDA compliance, platform strategy, content frameworks, and real-world examples from 10+ years in KSA pharma.",
+    "A field-tested guide to pharma social media marketing in Saudi Arabia. SFDA compliance, platform strategy, content frameworks, and real-world KSA examples.",
+  alternates: { canonical: "/blog/pharma-brand-social-media-saudi-arabia" },
   openGraph: {
-    title: "How to Build a Pharmaceutical Brand on Social Media in Saudi Arabia",
+    title: "Pharma Brand on Social Media in Saudi Arabia",
     description:
       "Learn how to build a pharma brand on social media in Saudi Arabia. SFDA-compliant strategies, platform breakdowns, and content frameworks from KSA pharma veterans.",
     type: "article",
     authors: ["PharmaGrowth"],
+    images: [{ url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop", width: 1200, height: 630 }],
   },
   keywords: [
     "pharma social media marketing Saudi Arabia",
@@ -34,7 +36,7 @@ export default function SocialMediaKSAArticle() {
       category="Strategy"
       slug="pharma-brand-social-media-saudi-arabia"
       publishedDate="2026-03-23"
-      heroImage="/images/blog-hero-social-media-pharma.png"
+      heroImage="/images/blog-hero-social-media-pharma.jpg"
       heroImageAlt="Pharmaceutical marketing team building social media strategy in Saudi Arabia"
       faqItems={[
         {

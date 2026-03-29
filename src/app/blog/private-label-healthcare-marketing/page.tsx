@@ -3,17 +3,17 @@ import Link from "next/link";
 import ArticleLayout from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
-  title:
-    "Healthcare Private Label Marketing: How Pharmacy Chains Are Disrupting Branded Products",
+  title: "Healthcare Private Label Marketing in KSA",
   description:
-    "A strategic guide to private label competition in pharmacy retail. Covers why chains like Nahdi and Al-Dawaa invest in own brands, which categories are most vulnerable, how branded companies should respond, and co-manufacturing as an opportunity. Written from 20+ years in GCC pharma.",
+    "A strategic guide to private label competition in pharma retail. Covers why chains like Nahdi invest in own brands, which categories are vulnerable, and how branded companies should respond.",
+  alternates: { canonical: "/blog/private-label-healthcare-marketing" },
   openGraph: {
-    title:
-      "Healthcare Private Label Marketing: How Pharmacy Chains Are Disrupting Branded Products",
+    title: "Healthcare Private Label Marketing in KSA",
     description:
       "How pharmacy private label products are disrupting branded OTC, supplements, and skincare in KSA and GCC. Defense strategies and co-manufacturing opportunities for pharma companies.",
     type: "article",
     authors: ["Sherif Al-Kady"],
+    images: [{ url: "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=1200&h=630&fit=crop", width: 1200, height: 630 }],
   },
   keywords: [
     "private label healthcare marketing",
@@ -40,7 +40,7 @@ export default function PrivateLabelArticle() {
       category="Strategy"
       slug="private-label-healthcare-marketing"
       publishedDate="2026-03-23"
-      heroImage="/images/blog-hero-private-label.png"
+      heroImage="/images/blog-hero-private-label.jpg"
       heroImageAlt="Pharmacy shelf showing branded versus private label healthcare products"
       faqItems={[
         {

@@ -2,15 +2,17 @@ import type { Metadata } from "next";
 import ArticleLayout from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
-  title: "Pharma Brand Positioning: How to Build a Brand That Doctors and Patients Actually Trust (2026)",
+  title: "Pharma Brand Positioning Guide (2026)",
   description:
-    "A practical framework for pharmaceutical brand positioning in regulated markets. Covers the difference between product and brand, positioning statement construction, emotional and rational drivers in healthcare, and how to build durable brand equity in KSA and GCC markets.",
+    "A practical framework for pharmaceutical brand positioning in regulated markets. Covers positioning statements, emotional and rational drivers, and brand equity in KSA and GCC.",
+  alternates: { canonical: "/blog/pharma-brand-positioning" },
   openGraph: {
-    title: "Pharma Brand Positioning: How to Build a Brand That Doctors and Patients Actually Trust (2026)",
+    title: "Pharma Brand Positioning Guide (2026)",
     description:
       "Practical framework for pharmaceutical brand positioning. Positioning statements, brand equity drivers, emotional and rational positioning in regulated healthcare markets.",
     type: "article",
     authors: ["Sherif Al-Kady"],
+    images: [{ url: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1200&h=630&fit=crop", width: 1200, height: 630 }],
   },
   keywords: [
     "pharma brand positioning strategy",
@@ -37,7 +39,7 @@ export default function PharmaBrandPositioningArticle() {
       category="Digital Marketing"
       slug="pharma-brand-positioning"
       publishedDate="2026-03-26"
-      heroImage="/images/blog-hero-brand-positioning.png"
+      heroImage="/images/blog-hero-brand-positioning.jpg"
       heroImageAlt="Pharmaceutical brand positioning strategy framework"
       faqItems={[
         {

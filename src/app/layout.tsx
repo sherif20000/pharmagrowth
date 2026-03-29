@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://pharmagrowth.co"),
   title: {
     default: "PharmaGrowth | Master Pharma Marketing. Accelerate Your Career.",
     template: "%s | PharmaGrowth",
@@ -42,6 +43,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
+      <head>
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="l8zsQRZY8DMoLK6MFGuCyg"
+          async
+        />
+      </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <Navbar />
         <main className="flex-1 pt-16 lg:pt-20">{children}</main>

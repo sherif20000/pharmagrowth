@@ -7,10 +7,12 @@ import CTAButton from "@/components/CTAButton";
 export const metadata: Metadata = {
   title: "Community",
   description:
-    "Join the PharmaGrowth community on Skool. Weekly live sessions, course library, peer networking, templates, and expert Q&A for pharma marketing professionals.",
+    "Join the PharmaGrowth Skool community. Weekly live sessions, course library, peer networking, templates, and expert Q&A for pharma marketers.",
+  alternates: { canonical: "/community" },
   openGraph: {
     title: "Join the PharmaGrowth Community | PharmaGrowth",
     description: "Weekly live sessions, courses, templates, and peer networking. Early bird: $29/month.",
+    images: [{ url: "/images/sherif-speaking.png", width: 800, height: 600 }],
   },
 };
 

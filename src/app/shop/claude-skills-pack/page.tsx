@@ -5,14 +5,16 @@ import Link from "next/link";
 const GUMROAD_URL = "https://sherifelkady.gumroad.com/l/pharmagrowth";
 
 export const metadata: Metadata = {
-  title: "Claude AI Skills Pack: Pharma Marketers Edition — 11 Ready-to-Install AI Skills",
+  title: "Claude AI Skills Pack for Pharma Marketers",
   description:
-    "11 ready-to-install Claude AI skills built for pharmaceutical and consumer healthcare marketers. Campaign planning, brand launch, trade marketing, KOL engagement, regulatory copy review, and more. Install in minutes. No coding required.",
+    "11 ready-to-install Claude AI skills for pharma marketers. Campaign planning, brand launch, trade marketing, KOL, regulatory copy review. No coding required. $49.",
+  alternates: { canonical: "/shop/claude-skills-pack" },
   openGraph: {
-    title: "Claude AI Skills Pack: Pharma Marketers Edition",
+    title: "Claude AI Skills Pack for Pharma Marketers",
     description:
       "11 pharma-specific Claude AI skills: campaign planner, brand launch, trade marketing, KOL engagement, regulatory copy checker, and more. Built for pharma marketers. $49.",
     type: "website",
+    images: [{ url: "/images/claude-skills-pack-cover.jpg", width: 800, height: 600 }],
   },
   keywords: [
     "Claude AI skills pharma",
@@ -208,7 +210,7 @@ export default function ClaudeSkillsPackPage() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50">
                 <Image
-                  src="/images/claude-skills-pack-cover.png"
+                  src="/images/claude-skills-pack-cover.jpg"
                   alt="Claude AI Skills Pack: Pharma Marketers Edition"
                   width={600}
                   height={400}
@@ -322,7 +324,7 @@ export default function ClaudeSkillsPackPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/60">
             <Image
-              src="/images/pharma-ai-dashboard.png"
+              src="/images/pharma-ai-dashboard.jpg"
               alt="Pharma marketing AI dashboard — campaign analytics, brand metrics, and AI-generated content"
               width={1200}
               height={675}

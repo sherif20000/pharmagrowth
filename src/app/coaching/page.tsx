@@ -5,10 +5,12 @@ import CTAButton from "@/components/CTAButton";
 export const metadata: Metadata = {
   title: "1:1 Coaching",
   description:
-    "Premium 1:1 coaching with Sherif Al-Kady for pharma brand managers, marketing directors, and career changers. Strategy sessions, marketing plan reviews, and career guidance.",
+    "1:1 coaching with Sherif Al-Kady for pharma brand managers and marketing directors. Strategy sessions, marketing plan reviews, and career guidance.",
+  alternates: { canonical: "/coaching" },
   openGraph: {
     title: "1:1 Premium Coaching | PharmaGrowth",
     description: "Personalized 1:1 coaching for pharma marketing professionals. $100/hour.",
+    images: [{ url: "/images/sherif-speaking.png", width: 800, height: 600 }],
   },
 };
 
