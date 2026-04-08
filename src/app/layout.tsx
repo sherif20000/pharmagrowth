@@ -50,6 +50,18 @@ export default function RootLayout({
           data-key="l8zsQRZY8DMoLK6MFGuCyg"
           async
         />
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQJ3CK6Z3C" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-HQJ3CK6Z3C');
+            `,
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <Navbar />
