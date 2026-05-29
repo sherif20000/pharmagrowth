@@ -133,6 +133,14 @@ export default function CommunityPage() {
               <p className="text-lg text-navy-400 leading-relaxed mb-8">
                 Join a private community of ambitious pharma and healthcare marketing professionals. Learn together, grow together, win together.
               </p>
+              {/* Price anchor */}
+              <div className="flex items-center gap-3 mb-6">
+                <span className="text-navy-600 text-sm line-through">$49/mo</span>
+                <span className="text-navy-500 text-sm line-through">$29/mo Early Bird</span>
+                <span className="px-3 py-1 bg-accent-500/10 border border-accent-500/30 text-accent-400 text-sm font-bold rounded-full">
+                  Free Now
+                </span>
+              </div>
               <CTAButton href="https://chat.whatsapp.com/L756sm1CXuQ9Ip1P3i6ZpW" size="lg" external>
                 Join Free on WhatsApp
                 <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
