@@ -93,8 +93,8 @@ export default function CoachingPage() {
             <p className="text-lg text-navy-400 leading-relaxed mb-8 max-w-2xl mx-auto">
               Get personalized strategy, career guidance, and marketing expertise directly from Sherif Al-Kady. No generic advice. Only proven frameworks from 20+ years in pharma.
             </p>
-            <CTAButton href="https://calendly.com/pharmagrowth" size="lg" external>
-              Book a Free Discovery Call
+            <CTAButton href="https://wa.me/966560885858" size="lg" external>
+              Book via WhatsApp
             </CTAButton>
           </div>
         </div>
@@ -172,8 +172,8 @@ export default function CoachingPage() {
           <p className="text-navy-400 text-lg mb-8 max-w-2xl mx-auto">
             Book a 1:1 coaching session at $100/hour and get a clear roadmap for your pharma marketing career.
           </p>
-          <CTAButton href="https://calendly.com/pharmagrowth" size="lg" external>
-            Book a Free Discovery Call
+          <CTAButton href="https://wa.me/966560885858" size="lg" external>
+            Book via WhatsApp
           </CTAButton>
         </div>
       </section>

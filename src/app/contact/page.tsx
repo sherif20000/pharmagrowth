@@ -176,13 +176,13 @@ export default function ContactPage() {
                   Prefer a live conversation? Schedule a 30-minute discovery call to discuss your goals.
                 </p>
                 <CTAButton
-                  href="https://calendly.com/pharmagrowth"
+                  href="https://wa.me/966560885858"
                   variant="secondary"
                   size="sm"
                   className="w-full"
                   external
                 >
-                  Open Calendly
+                  Message on WhatsApp
                 </CTAButton>
               </div>
 

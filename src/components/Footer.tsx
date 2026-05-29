@@ -34,7 +34,7 @@ const socialLinks = [
     ),
   },
   {
-    href: "https://www.youtube.com/@pharmagrowth2026",
+    href: "https://www.youtube.com/@sherifalkadymarketing",
     label: "YouTube",
     hoverBg: "hover:bg-[#FF0000]",
     icon: (
@@ -150,12 +150,12 @@ export default function Footer() {
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-navy-600">
+            <p className="text-xs text-navy-400">
               &copy; {new Date().getFullYear()} PharmaGrowth. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <Link href="/privacy-policy" className="text-xs text-navy-600 hover:text-white transition-colors">Privacy Policy</Link>
-              <Link href="/terms-of-service" className="text-xs text-navy-600 hover:text-white transition-colors">Terms of Service</Link>
+              <Link href="/privacy-policy" className="text-xs text-navy-400 hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="/terms-of-service" className="text-xs text-navy-400 hover:text-white transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>
