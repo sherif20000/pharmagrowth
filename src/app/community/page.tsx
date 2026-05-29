@@ -196,13 +196,24 @@ export default function CommunityPage() {
             subtitle="One plan. Everything included. No hidden fees."
           />
 
+          {/* Free Now banner */}
+          <div className="max-w-4xl mx-auto mb-8">
+            <div className="flex items-center justify-center gap-3 bg-accent-500/10 border border-accent-500/30 rounded-2xl px-6 py-4">
+              <span className="w-2 h-2 rounded-full bg-accent-500 animate-pulse shrink-0" />
+              <p className="text-accent-400 text-sm font-medium text-center">
+                <span className="font-bold">Free on WhatsApp right now.</span>{" "}
+                Prices below are the upcoming Skool launch pricing — join today and lock in your founding member rate.
+              </p>
+            </div>
+          </div>
+
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6 items-start">
             {/* Regular Price — Anchor (shows what they'll pay later) */}
             <PricingCard
               title="Regular Membership"
               price="$49"
               period="month"
-              description="Standard pricing after early bird period ends."
+              description="Standard pricing after Skool launch. Available after founding period ends."
               features={[
                 "Weekly live workshops & Q&A sessions",
                 "Full course library (all modules)",
@@ -221,10 +232,9 @@ export default function CommunityPage() {
             <div>
               <PricingCard
                 title="Early Bird Membership"
-                price="$29"
-                originalPrice="$49"
-                period="month"
-                description="Lock in this price forever. Cancel anytime."
+                price="Free"
+                originalPrice="$29/mo after launch"
+                description="Join free on WhatsApp now. Lock in $29/mo forever when Skool launches."
                 features={[
                   "Everything in Regular, plus:",
                   "Founding member badge & recognition",
@@ -238,15 +248,15 @@ export default function CommunityPage() {
                 ctaText="Join Free on WhatsApp"
                 ctaHref="https://chat.whatsapp.com/L756sm1CXuQ9Ip1P3i6ZpW"
                 highlighted
-                badge="Save 41%"
+                badge="Free Now"
               />
               {/* Urgency bar */}
               <div className="mt-4 bg-navy-900 border border-white/10 rounded-xl p-4 text-center">
                 <p className="text-accent-500 text-sm font-semibold mb-1">
-                  Early bird pricing — limited time only
+                  Free now — $29/mo when Skool launches
                 </p>
                 <p className="text-navy-500 text-xs">
-                  Early bird pricing locks in permanently — it will never increase for founding members. When the early bird period ends, price goes to $49/month.
+                  Join free on WhatsApp today. When we launch on Skool, founding members lock in $29/mo for life — never goes up, even after the price moves to $49/month.
                 </p>
               </div>
             </div>
