@@ -147,7 +147,7 @@ export default function CommunityPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
               </CTAButton>
-              <p className="text-navy-600 text-sm mt-4">Free while we build on Skool. Founding members lock in $29/mo for life.</p>
+              <p className="text-navy-600 text-sm mt-4">Free for everyone right now. Moves to $29/mo when we launch on Skool.</p>
             </div>
 
             {/* Community Image */}
