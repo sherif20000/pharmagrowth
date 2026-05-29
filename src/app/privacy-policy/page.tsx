@@ -112,8 +112,8 @@ export default function PrivacyPolicyPage() {
             </ul>
             <p className="mt-3">
               To exercise any of these rights, email us at{" "}
-              <a href="mailto:hello@pharmagrowth.co" className="text-accent-400 hover:text-accent-300 transition-colors">
-                hello@pharmagrowth.co
+              <a href="mailto:pharmagrowth.co@gmail.com" className="text-accent-400 hover:text-accent-300 transition-colors">
+                pharmagrowth.co@gmail.com
               </a>
             </p>
           </section>
@@ -131,8 +131,8 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-lg font-semibold text-white mb-3">10. Contact</h2>
             <p>
               Questions about this policy? Reach us at{" "}
-              <a href="mailto:hello@pharmagrowth.co" className="text-accent-400 hover:text-accent-300 transition-colors">
-                hello@pharmagrowth.co
+              <a href="mailto:pharmagrowth.co@gmail.com" className="text-accent-400 hover:text-accent-300 transition-colors">
+                pharmagrowth.co@gmail.com
               </a>
             </p>
           </section>

@@ -128,8 +128,8 @@ export default function TermsOfServicePage() {
             <h2 className="text-lg font-semibold text-white mb-3">11. Contact</h2>
             <p>
               Questions about these terms? Email us at{" "}
-              <a href="mailto:hello@pharmagrowth.co" className="text-accent-400 hover:text-accent-300 transition-colors">
-                hello@pharmagrowth.co
+              <a href="mailto:pharmagrowth.co@gmail.com" className="text-accent-400 hover:text-accent-300 transition-colors">
+                pharmagrowth.co@gmail.com
               </a>
             </p>
           </section>
