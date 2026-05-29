@@ -168,7 +168,7 @@ export default function HomePage() {
                   </svg>
                 </CTAButton>
                 <CTAButton href="/about" variant="secondary" size="lg">
-                  Learn More
+                  About PharmaGrowth
                 </CTAButton>
               </div>
 
@@ -292,7 +292,7 @@ export default function HomePage() {
                 <h3 className="text-white font-semibold mb-2 group-hover:text-accent-400 transition-colors">{resource.title}</h3>
                 <p className="text-navy-500 text-sm leading-relaxed flex-1 mb-4">{resource.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-navy-600 text-xs">{resource.format}</span>
+                  <span className="text-navy-400 text-xs">{resource.format}</span>
                   <span className="text-accent-500 text-sm font-semibold">Download Free →</span>
                 </div>
               </a>
@@ -314,7 +314,7 @@ export default function HomePage() {
                 Download Free
               </button>
             </form>
-            <p className="text-navy-600 text-xs mt-3 text-center">No spam. Instant download link sent to your email.</p>
+            <p className="text-navy-400 text-xs mt-3 text-center">No spam. Instant download link sent to your email.</p>
           </div>
         </div>
       </section>
@@ -377,7 +377,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <CTAButton href="/community" size="lg">
-                  Join for $29/month
+                  Join the Community
                 </CTAButton>
                 <CTAButton href="/contact" variant="outline" size="lg">
                   Book a Free Discovery Call

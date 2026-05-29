@@ -7,7 +7,7 @@ import CTAButton from "@/components/CTAButton";
 export const metadata: Metadata = {
   title: "Community",
   description:
-    "Join the PharmaGrowth Skool community. Weekly live sessions, course library, peer networking, templates, and expert Q&A for pharma marketers.",
+    "Join the PharmaGrowth WhatsApp community. Connect with pharma and healthcare marketing professionals across GCC and MENA. Free to join now.",
   alternates: { canonical: "/community" },
   openGraph: {
     title: "Join the PharmaGrowth Community | PharmaGrowth",
@@ -80,7 +80,7 @@ const faqs = [
   },
   {
     q: "What platform is the community on?",
-    a: "We use Skool, a modern community platform that combines courses, discussions, and live events in one place. It works on web and mobile.",
+    a: "We currently run on WhatsApp — easy to join, no new app needed. We are building our full platform on Skool (courses, live sessions, resources) which launches soon. WhatsApp members get first access.",
   },
   {
     q: "How much time do I need to commit?",
@@ -88,7 +88,7 @@ const faqs = [
   },
   {
     q: "Can I cancel anytime?",
-    a: "Yes. There are no contracts or commitments. Cancel anytime from your Skool dashboard. Your access continues until the end of your billing period.",
+    a: "Yes. The WhatsApp community is free to join and free to leave anytime. When we launch on Skool, paid membership will also be cancel-anytime with no contracts.",
   },
   {
     q: "Is this relevant for non-GCC markets?",
@@ -133,13 +133,13 @@ export default function CommunityPage() {
               <p className="text-lg text-navy-400 leading-relaxed mb-8">
                 Join a private community of ambitious pharma and healthcare marketing professionals. Learn together, grow together, win together.
               </p>
-              <CTAButton href="https://skool.com/pharmagrowth" size="lg" external>
-                Join for $29/month
+              <CTAButton href="https://chat.whatsapp.com/L756sm1CXuQ9Ip1P3i6ZpW" size="lg" external>
+                Join Free on WhatsApp
                 <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
               </CTAButton>
-              <p className="text-navy-600 text-sm mt-4">Early bird launch price. Cancel anytime.</p>
+              <p className="text-navy-600 text-sm mt-4">Free while we build on Skool. Founding members lock in $29/mo for life.</p>
             </div>
 
             {/* Community Image */}
@@ -203,7 +203,7 @@ export default function CommunityPage() {
                 "Expert feedback on your campaigns",
                 "Monthly challenges & accountability",
                 "Archive of all past sessions",
-                "Mobile access via Skool app",
+                "Mobile access via WhatsApp",
               ]}
               ctaText="Available After Launch"
               ctaHref="#"
@@ -227,8 +227,8 @@ export default function CommunityPage() {
                   "Exclusive founding members channel",
                   "Shape the community roadmap",
                 ]}
-                ctaText="Claim Early Bird Spot"
-                ctaHref="https://skool.com/pharmagrowth"
+                ctaText="Join Free on WhatsApp"
+                ctaHref="https://chat.whatsapp.com/L756sm1CXuQ9Ip1P3i6ZpW"
                 highlighted
                 badge="Save 41%"
               />
@@ -290,8 +290,8 @@ export default function CommunityPage() {
           <p className="text-navy-400 text-lg mb-8 max-w-2xl mx-auto">
             Join hundreds of pharma professionals already growing their skills and careers inside the community.
           </p>
-          <CTAButton href="https://skool.com/pharmagrowth" size="lg" external>
-            Join for $29/month
+          <CTAButton href="https://chat.whatsapp.com/L756sm1CXuQ9Ip1P3i6ZpW" size="lg" external>
+            Join Free on WhatsApp
           </CTAButton>
         </div>
       </section>
