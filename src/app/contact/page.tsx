@@ -75,13 +75,16 @@ export default function ContactPage() {
             <div className="lg:col-span-3">
               <div className="bg-navy-900 border border-white/5 rounded-2xl p-6 lg:p-8">
                 <h2 className="text-xl font-bold text-white mb-6">Send a Message</h2>
-                <form className="space-y-5">
+                <form action="https://formspree.io/f/xbdbwnpz" method="POST" className="space-y-5">
+                  <input type="hidden" name="_subject" value="New Contact — PharmaGrowth" />
+                  <input type="hidden" name="_next" value="https://pharmagrowth.co/contact" />
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <label htmlFor="firstName" className="block text-sm text-navy-400 mb-2">First Name</label>
                       <input
                         type="text"
                         id="firstName"
+                        name="first_name"
                         className="w-full px-4 py-3 bg-navy-800 border border-white/10 rounded-lg text-white placeholder:text-navy-600 text-sm focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
                         placeholder="Your first name"
                       />
@@ -91,6 +94,7 @@ export default function ContactPage() {
                       <input
                         type="text"
                         id="lastName"
+                        name="last_name"
                         className="w-full px-4 py-3 bg-navy-800 border border-white/10 rounded-lg text-white placeholder:text-navy-600 text-sm focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
                         placeholder="Your last name"
                       />
@@ -102,6 +106,7 @@ export default function ContactPage() {
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       className="w-full px-4 py-3 bg-navy-800 border border-white/10 rounded-lg text-white placeholder:text-navy-600 text-sm focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
                       placeholder="your@email.com"
                     />
@@ -111,6 +116,7 @@ export default function ContactPage() {
                     <label htmlFor="subject" className="block text-sm text-navy-400 mb-2">Subject</label>
                     <select
                       id="subject"
+                      name="subject"
                       className="w-full px-4 py-3 bg-navy-800 border border-white/10 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
                       defaultValue=""
                     >
@@ -127,6 +133,7 @@ export default function ContactPage() {
                     <label htmlFor="message" className="block text-sm text-navy-400 mb-2">Message</label>
                     <textarea
                       id="message"
+                      name="message"
                       rows={5}
                       className="w-full px-4 py-3 bg-navy-800 border border-white/10 rounded-lg text-white placeholder:text-navy-600 text-sm focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent resize-none"
                       placeholder="Tell us how we can help..."

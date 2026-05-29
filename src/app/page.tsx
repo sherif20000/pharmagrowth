@@ -301,9 +301,12 @@ export default function HomePage() {
 
           {/* Email capture for playbook */}
           <div className="max-w-md mx-auto">
-            <form className="flex flex-col sm:flex-row gap-3">
+            <form action="https://formspree.io/f/xbdbwnpz" method="POST" className="flex flex-col sm:flex-row gap-3">
+              <input type="hidden" name="_subject" value="Free Playbook Request — PharmaGrowth" />
+              <input type="hidden" name="source" value="Homepage Playbook" />
               <input
                 type="email"
+                name="email"
                 placeholder="Enter your email for the free playbook"
                 className="flex-1 px-4 py-3 bg-navy-900 border border-white/10 rounded-lg text-white placeholder:text-navy-600 text-sm focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
               />
