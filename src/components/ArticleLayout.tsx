@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import RelatedArticles from "./RelatedArticles";
 
 export interface FaqItem {
   question: string;
@@ -164,6 +165,9 @@ export default function ArticleLayout({
         {children}
       </article>
 
+      {/* Related Articles — internal linking cluster */}
+      <RelatedArticles slug={slug} />
+
       {/* Conversion CTA Section */}
       <section className="border-t border-white/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -221,7 +225,7 @@ export default function ArticleLayout({
           </p>
           <div className="flex items-center justify-center gap-4">
             <a
-              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent("https://pharmagrowth.co/blog")}`}
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(articleUrl)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 text-navy-300 rounded-lg transition-colors text-sm"
@@ -232,7 +236,7 @@ export default function ArticleLayout({
               X / Twitter
             </a>
             <a
-              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent("https://pharmagrowth.co/blog")}`}
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 text-navy-300 rounded-lg transition-colors text-sm"
