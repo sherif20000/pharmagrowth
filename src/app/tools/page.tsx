@@ -46,7 +46,8 @@ const calculators: Tool[] = [
     title: "CHC Contribution Margin Calculator",
     description:
       "Model a brand's contribution margin and break-even from price, COGS, and A&P spend. Built for consumer healthcare P&Ls.",
-    status: "soon",
+    href: "/tools/chc-contribution-margin-calculator",
+    status: "live",
   },
   {
     title: "OTC Launch Budget Estimator",
