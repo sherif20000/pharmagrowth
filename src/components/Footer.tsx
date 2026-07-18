@@ -5,7 +5,7 @@ const footerLinks = {
     { href: "/community", label: "Community" },
     { href: "/blog", label: "Blog" },
     { href: "/shop", label: "Shop" },
-    { href: "/tools/raqibhealth", label: "RaqibHealth" },
+    { href: "/tools", label: "Tools" },
   ],
   resources: [
     { href: "/about", label: "About" },
