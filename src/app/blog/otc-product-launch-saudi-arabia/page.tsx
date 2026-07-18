@@ -174,6 +174,15 @@ export default function OtcProductLaunchArticle() {
         promo calendars &mdash; is far harder to displace than a heavy
         advertiser with shallow retail roots.
       </p>
+      <p>
+        The hardest competitor to plan against is the one you never saw
+        coming &mdash; a rival product that registers with the SFDA while you
+        are still building your own dossier. This is exactly what{" "}
+        <Link href="/tools/raqibhealth">RaqibHealth</Link> was built to catch:
+        it tracks new SFDA registrations, approvals, and recalls across KSA and
+        the GCC, so competitor launches show up as an early-warning signal
+        instead of a shelf-day surprise.
+      </p>
 
       <h3>Where is the price corridor?</h3>
       <p>
