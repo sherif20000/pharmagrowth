@@ -153,6 +153,14 @@ export default function ConsumerInsightsConsumerHealthcareArticle() {
         real time with the actual human being who opens the pack at home,
         you are running a consumer business on secondhand information.
       </p>
+      <p>
+        The same discipline applies to the supply side of insight: consumer
+        understanding tells you what shoppers want, but you also need to see
+        what the market is doing. <Link href="/tools/raqibhealth">RaqibHealth</Link>{" "}
+        tracks new SFDA registrations, competitor launches, and recalls across
+        KSA and the GCC &mdash; the market-movement half of the intelligence
+        picture that pairs with the consumer half this guide covers.
+      </p>
 
       <h2>Who Is the KSA Consumer Healthcare Shopper of 2026?</h2>
       <p>

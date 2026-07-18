@@ -133,7 +133,7 @@ export default function AboutPage() {
             {/* Founder Photo */}
             <div className="flex items-center justify-center">
               <div className="w-full max-w-sm aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 relative">
-                <img
+                <img loading="lazy" decoding="async"
                   src="/images/sherif-speaking.png"
                   alt="Sherif Al-Kady - Founder of PharmaGrowth"
                   className="w-full h-full object-cover"
@@ -258,7 +258,7 @@ export default function AboutPage() {
                 className="group block bg-navy-900 border border-white/5 rounded-2xl overflow-hidden hover:border-accent-500/30 transition-colors"
               >
                 <div className="relative aspect-video">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src="https://i.ytimg.com/vi/Ffj4oD_rxXc/hqdefault.jpg"
                     alt="Marketing Club Session - Digital Marketing in Consumer Healthcare"
                     className="w-full h-full object-cover"
@@ -284,7 +284,7 @@ export default function AboutPage() {
                 className="group block bg-navy-900 border border-white/5 rounded-2xl overflow-hidden hover:border-accent-500/30 transition-colors"
               >
                 <div className="relative aspect-video">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src="https://i.ytimg.com/vi/He_5HuYK084/hqdefault.jpg"
                     alt="Marketing Club Session - Best Practice Pharma Digital Marketing"
                     className="w-full h-full object-cover"
@@ -310,7 +310,7 @@ export default function AboutPage() {
                 className="group block bg-navy-900 border border-white/5 rounded-2xl overflow-hidden hover:border-accent-500/30 transition-colors"
               >
                 <div className="relative aspect-video">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src="https://i.ytimg.com/vi/DZAzB0fwRDA/maxresdefault.jpg"
                     alt="Live Webinar - AI for Non-Technical Professionals"
                     className="w-full h-full object-cover"

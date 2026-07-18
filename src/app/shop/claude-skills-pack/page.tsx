@@ -233,7 +233,7 @@ export default function ClaudeSkillsPackPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
             <div className="flex items-center gap-3">
-              <img
+              <img loading="lazy" decoding="async"
                 src="/images/sherif-headshot.png"
                 alt="Sherif Al-Kady"
                 className="w-9 h-9 rounded-full object-cover border border-white/10"

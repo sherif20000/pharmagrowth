@@ -593,7 +593,11 @@ export default function RetailMediaConsumerHealthcareKSAArticle() {
         terms, generic terms, and competitor terms &mdash; which makes the
         blended ROAS meaningless and hides where money is actually working.
         I structure every CHC account into four layers, each with its own
-        budget, bid logic, and success metric.
+        budget, bid logic, and success metric. One prerequisite for the
+        competitor layers: know who is actually entering your category.{" "}
+        <Link href="/tools/raqibhealth">RaqibHealth</Link> tracks new SFDA
+        registrations and launches across KSA, so a new rival shows up on
+        your conquest keyword list before it shows up in your sales data.
       </p>
 
       <h3>Layer 1: Branded Defense</h3>

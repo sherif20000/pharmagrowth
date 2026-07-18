@@ -46,9 +46,29 @@ const contactMethods = [
   },
 ];
 
-export default function ContactPage() {
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ sent?: string }>;
+}) {
+  const { sent } = await searchParams;
   return (
     <>
+      {sent === "true" && (
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+          <div
+            role="status"
+            className="flex items-center gap-3 bg-accent-500/10 border border-accent-500/30 rounded-xl px-5 py-4"
+          >
+            <svg className="w-5 h-5 text-accent-400 shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p className="text-accent-300 text-sm font-medium">
+              Message sent — we&apos;ll get back to you within 24 hours.
+            </p>
+          </div>
+        </div>
+      )}
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] via-transparent to-transparent" />
@@ -77,7 +97,7 @@ export default function ContactPage() {
                 <h2 className="text-xl font-bold text-white mb-6">Send a Message</h2>
                 <form action="https://formspree.io/f/xbdbwnpz" method="POST" className="space-y-5">
                   <input type="hidden" name="_subject" value="New Contact — PharmaGrowth" />
-                  <input type="hidden" name="_next" value="https://pharmagrowth.co/contact" />
+                  <input type="hidden" name="_next" value="https://pharmagrowth.co/contact?sent=true" />
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <label htmlFor="firstName" className="block text-sm text-navy-400 mb-2">First Name</label>

@@ -153,7 +153,7 @@ export default function CommunityPage() {
             {/* Community Image */}
             <div className="hidden lg:block">
               <div className="rounded-2xl overflow-hidden border border-white/10">
-                <img
+                <img loading="lazy" decoding="async"
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=400&fit=crop"
                   alt="Team of professionals collaborating"
                   className="w-full h-auto object-cover"

@@ -1,28 +1,7 @@
 import { MetadataRoute } from "next";
+import { articleSlugs } from "@/lib/articles";
 
 const BASE_URL = "https://pharmagrowth.co";
-
-const articleSlugs = [
-  "digital-marketing-pharmaceutical-companies",
-  "ai-tools-pharma-marketing",
-  "pharma-brand-social-media-saudi-arabia",
-  "trade-marketing-pharmaceutical-industry",
-  "merchandising-consumer-healthcare",
-  "private-label-healthcare-marketing",
-  "ecommerce-consumer-healthcare-products",
-  "pharmacy-merchandising-strategies",
-  "healthcare-private-label-marketing",
-  "ecommerce-consumer-healthcare-gcc",
-  "sfda-marketing-compliance",
-  "hcp-digital-engagement",
-  "pharma-brand-positioning",
-  "pharmacy-channel-management-ksa",
-  "consumer-insights-consumer-healthcare",
-  "influencer-marketing-consumer-health-ksa",
-  "otc-product-launch-saudi-arabia",
-  "retail-media-consumer-healthcare-ksa",
-  "vitamins-supplements-marketing-gcc",
-];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
