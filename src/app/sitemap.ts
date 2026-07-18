@@ -40,6 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/tools/raqibhealth`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/tools/pharmacy-trade-margin-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/tools/chc-contribution-margin-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/tools/otc-launch-budget-estimator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
   ];
 
   const articlePages: MetadataRoute.Sitemap = articleSlugs.map((slug) => ({

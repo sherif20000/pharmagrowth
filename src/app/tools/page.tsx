@@ -53,7 +53,8 @@ const calculators: Tool[] = [
     title: "OTC Launch Budget Estimator",
     description:
       "Size the investment behind a new OTC launch in KSA — registration, trade, media, and sampling — before you commit.",
-    status: "soon",
+    href: "/tools/otc-launch-budget-estimator",
+    status: "live",
   },
   {
     title: "Retail Media ROAS Calculator",
