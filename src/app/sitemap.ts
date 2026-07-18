@@ -17,6 +17,11 @@ const articleSlugs = [
   "hcp-digital-engagement",
   "pharma-brand-positioning",
   "pharmacy-channel-management-ksa",
+  "consumer-insights-consumer-healthcare",
+  "influencer-marketing-consumer-health-ksa",
+  "otc-product-launch-saudi-arabia",
+  "retail-media-consumer-healthcare-ksa",
+  "vitamins-supplements-marketing-gcc",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

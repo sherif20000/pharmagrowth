@@ -84,6 +84,31 @@ const ARTICLES: Record<string, ArticleMeta> = {
     category: "Digital Marketing",
     image: "/images/blog-hero-brand-positioning.jpg",
   },
+  "consumer-insights-consumer-healthcare": {
+    title: "Consumer Insights for Consumer Healthcare Brands: How to Actually Understand Your Shopper in KSA (2026)",
+    category: "Consumer Centricity",
+    image: "/images/blog-hero-consumer-insights.jpg",
+  },
+  "influencer-marketing-consumer-health-ksa": {
+    title: "Influencer Marketing for Consumer Health Brands in Saudi Arabia: The SFDA-Compliant Playbook (2026)",
+    category: "Digital Marketing",
+    image: "/images/blog-hero-influencer-ksa.jpg",
+  },
+  "otc-product-launch-saudi-arabia": {
+    title: "How to Launch an OTC Product in Saudi Arabia: The Complete Playbook (2026)",
+    category: "Strategy",
+    image: "/images/blog-hero-otc-launch.jpg",
+  },
+  "retail-media-consumer-healthcare-ksa": {
+    title: "Retail Media for Consumer Healthcare in KSA: Winning Amazon.sa, Noon and Nahdi Ads (2026)",
+    category: "E-Commerce",
+    image: "/images/blog-hero-retail-media.jpg",
+  },
+  "vitamins-supplements-marketing-gcc": {
+    title: "Vitamins & Supplements Marketing in the GCC: How to Build a Winning VMS Brand (2026)",
+    category: "Consumer Healthcare",
+    image: "/images/blog-hero-vms-gcc.jpg",
+  },
 };
 
 /** 3 contextually-related articles per slug. Every article receives inbound links. */
@@ -95,18 +120,18 @@ const RELATED: Record<string, string[]> = {
   ],
   "digital-marketing-pharmaceutical-companies": [
     "ai-tools-pharma-marketing",
-    "pharma-brand-social-media-saudi-arabia",
+    "influencer-marketing-consumer-health-ksa",
     "hcp-digital-engagement",
   ],
   "ecommerce-consumer-healthcare-gcc": [
+    "retail-media-consumer-healthcare-ksa",
     "ecommerce-consumer-healthcare-products",
-    "merchandising-consumer-healthcare",
     "private-label-healthcare-marketing",
   ],
   "ecommerce-consumer-healthcare-products": [
     "ecommerce-consumer-healthcare-gcc",
+    "retail-media-consumer-healthcare-ksa",
     "pharmacy-merchandising-strategies",
-    "digital-marketing-pharmaceutical-companies",
   ],
   "hcp-digital-engagement": [
     "sfda-marketing-compliance",
@@ -116,27 +141,27 @@ const RELATED: Record<string, string[]> = {
   "healthcare-private-label-marketing": [
     "private-label-healthcare-marketing",
     "merchandising-consumer-healthcare",
-    "pharmacy-channel-management-ksa",
+    "vitamins-supplements-marketing-gcc",
   ],
   "merchandising-consumer-healthcare": [
     "pharmacy-merchandising-strategies",
-    "trade-marketing-pharmaceutical-industry",
+    "consumer-insights-consumer-healthcare",
     "pharmacy-channel-management-ksa",
   ],
   "pharma-brand-positioning": [
+    "consumer-insights-consumer-healthcare",
     "pharma-brand-social-media-saudi-arabia",
     "digital-marketing-pharmaceutical-companies",
-    "hcp-digital-engagement",
   ],
   "pharma-brand-social-media-saudi-arabia": [
+    "influencer-marketing-consumer-health-ksa",
     "sfda-marketing-compliance",
-    "digital-marketing-pharmaceutical-companies",
     "pharma-brand-positioning",
   ],
   "pharmacy-channel-management-ksa": [
     "trade-marketing-pharmaceutical-industry",
+    "otc-product-launch-saudi-arabia",
     "merchandising-consumer-healthcare",
-    "ecommerce-consumer-healthcare-products",
   ],
   "pharmacy-merchandising-strategies": [
     "merchandising-consumer-healthcare",
@@ -149,14 +174,39 @@ const RELATED: Record<string, string[]> = {
     "pharmacy-channel-management-ksa",
   ],
   "sfda-marketing-compliance": [
+    "otc-product-launch-saudi-arabia",
+    "influencer-marketing-consumer-health-ksa",
     "hcp-digital-engagement",
-    "pharma-brand-social-media-saudi-arabia",
-    "ai-tools-pharma-marketing",
   ],
   "trade-marketing-pharmaceutical-industry": [
+    "retail-media-consumer-healthcare-ksa",
     "pharmacy-channel-management-ksa",
     "pharmacy-merchandising-strategies",
-    "merchandising-consumer-healthcare",
+  ],
+  "consumer-insights-consumer-healthcare": [
+    "vitamins-supplements-marketing-gcc",
+    "pharma-brand-positioning",
+    "digital-marketing-pharmaceutical-companies",
+  ],
+  "influencer-marketing-consumer-health-ksa": [
+    "pharma-brand-social-media-saudi-arabia",
+    "sfda-marketing-compliance",
+    "consumer-insights-consumer-healthcare",
+  ],
+  "otc-product-launch-saudi-arabia": [
+    "sfda-marketing-compliance",
+    "pharmacy-channel-management-ksa",
+    "retail-media-consumer-healthcare-ksa",
+  ],
+  "retail-media-consumer-healthcare-ksa": [
+    "ecommerce-consumer-healthcare-gcc",
+    "otc-product-launch-saudi-arabia",
+    "vitamins-supplements-marketing-gcc",
+  ],
+  "vitamins-supplements-marketing-gcc": [
+    "consumer-insights-consumer-healthcare",
+    "influencer-marketing-consumer-health-ksa",
+    "ecommerce-consumer-healthcare-gcc",
   ],
 };
 

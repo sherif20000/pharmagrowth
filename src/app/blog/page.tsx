@@ -16,6 +16,56 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    title: "Consumer Insights for Consumer Healthcare Brands: How to Actually Understand Your Shopper in KSA (2026)",
+    excerpt:
+      "Jobs-to-be-done for health categories, cheap insight methods that work in the GCC (review mining, Arabic social listening, pharmacy interviews), personas, need-states, and the consumer journey from trigger to repeat purchase.",
+    category: "Consumer Centricity",
+    date: "July 17, 2026",
+    readTime: "15 min read",
+    image: "/images/blog-hero-consumer-insights.jpg",
+    href: "/blog/consumer-insights-consumer-healthcare",
+  },
+  {
+    title: "Influencer Marketing for Consumer Health Brands in Saudi Arabia: The SFDA-Compliant Playbook (2026)",
+    excerpt:
+      "Influencer tiers, mawthooq licensing, what claims creators can and cannot make per category, compliant briefing frameworks, platform strategy for KSA, budgets in SAR, and measurement beyond vanity metrics.",
+    category: "Digital Marketing",
+    date: "July 17, 2026",
+    readTime: "14 min read",
+    image: "/images/blog-hero-influencer-ksa.jpg",
+    href: "/blog/influencer-marketing-consumer-health-ksa",
+  },
+  {
+    title: "How to Launch an OTC Product in Saudi Arabia: The Complete Playbook (2026)",
+    excerpt:
+      "The phased launch playbook: SFDA classification and registration, distributor selection, listing fees, pharmacist recommendation engine, launch marketing mix, in-store execution, and the first-90-days scorecard.",
+    category: "Strategy",
+    date: "July 17, 2026",
+    readTime: "16 min read",
+    image: "/images/blog-hero-otc-launch.jpg",
+    href: "/blog/otc-product-launch-saudi-arabia",
+  },
+  {
+    title: "Retail Media for Consumer Healthcare in KSA: Winning Amazon.sa, Noon and Nahdi Ads (2026)",
+    excerpt:
+      "The KSA retail media landscape mapped: sponsored placements, Arabic + English keyword strategy, campaign architecture, PDP-first rules, realistic CPC ranges, and how retail media is entering JBP negotiations.",
+    category: "E-Commerce",
+    date: "July 17, 2026",
+    readTime: "14 min read",
+    image: "/images/blog-hero-retail-media.jpg",
+    href: "/blog/retail-media-consumer-healthcare-ksa",
+  },
+  {
+    title: "Vitamins & Supplements Marketing in the GCC: How to Build a Winning VMS Brand (2026)",
+    excerpt:
+      "Why VMS is the fastest-growing CHC category in the GCC, the regulatory line for supplement claims, emotional positioning playbooks, the iHerb effect, subscription mechanics, and category P&L realities.",
+    category: "Consumer Healthcare",
+    date: "July 17, 2026",
+    readTime: "15 min read",
+    image: "/images/blog-hero-vms-gcc.jpg",
+    href: "/blog/vitamins-supplements-marketing-gcc",
+  },
+  {
     title: "The Complete Guide to Digital Marketing for Pharmaceutical Companies (2026)",
     excerpt:
       "A proven framework covering 7 core channels, SFDA/FDA compliance, GCC case studies, and actionable strategy from 20+ years in pharma.",
