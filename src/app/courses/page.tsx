@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Courses",
   description:
     "Structured group coaching cohorts and masterclasses for pharma marketing professionals. 8-week programs covering digital marketing, brand building, and AI marketing.",
+  alternates: { canonical: "/courses" },
   openGraph: {
     title: "Courses & Cohorts | PharmaGrowth",
     description: "8-week group coaching cohorts and on-demand masterclasses. Coming soon.",
