@@ -194,38 +194,6 @@ export default function ResourcesPage() {
           </div>
         </div>
       </section>
-
-      {/* Newsletter capture */}
-      <section className="py-20 lg:py-28 bg-navy-900/30">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-3">Get new resources first</h2>
-          <p className="text-navy-400 mb-8">
-            New templates, calculators, and guides — plus one actionable CHC marketing idea, every week.
-          </p>
-          <form
-            action="https://formspree.io/f/xbdbwnpz"
-            method="POST"
-            className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-          >
-            <input type="hidden" name="_subject" value="Resources Newsletter Signup — PharmaGrowth" />
-            <input type="hidden" name="source" value="Resources Page" />
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-navy-900 border border-white/10 rounded-lg text-white placeholder:text-navy-600 text-sm focus:outline-none focus:ring-2 focus:ring-accent-500/40 focus:border-transparent"
-            />
-            <button
-              type="submit"
-              className="px-6 py-3 bg-white hover:bg-navy-200 text-navy-950 text-sm font-semibold rounded-lg transition-colors shrink-0"
-            >
-              Subscribe
-            </button>
-          </form>
-          <p className="text-navy-600 text-xs mt-3">No spam. Unsubscribe anytime.</p>
-        </div>
-      </section>
     </>
   );
 }
