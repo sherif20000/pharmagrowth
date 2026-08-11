@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PharmaGrowth — Launch Posts</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0A1628;
+      color: #e2e8f0;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    header {
+      max-width: 760px;
+      margin: 0 auto 40px;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #00D4B8;
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      color: #64748b;
+      font-size: 0.875rem;
+      margin-top: 6px;
+    }
+
+    .calendar {
+      max-width: 760px;
+      margin: 0 auto 48px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .calendar table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+
+    .calendar th {
+      background: rgba(0,212,184,0.1);
+      color: #00D4B8;
+      padding: 10px 16px;
+      text-align: left;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.72rem;
+    }
+
+    .calendar td {
+      padding: 10px 16px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      color: #cbd5e1;
+    }
+
+    .calendar tr:hover td { background: rgba(255,255,255,0.03); }
+
+    .platform-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+    .li { background: rgba(10,102,194,0.25); color: #60a5fa; }
+    .fb { background: rgba(24,119,242,0.2); color: #93c5fd; }
+    .ig { background: rgba(225,48,108,0.2); color: #f9a8d4; }
+
+    .posts { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+
+    .week-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #00D4B8;
+      margin-bottom: 4px;
+      margin-top: 8px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .card:hover { border-color: rgba(0,212,184,0.3); }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.03);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .card-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+    .day-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #94a3b8;
+    }
+
+    .post-title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+
+    .card-body { padding: 18px; }
+
+    .copy-note {
+      font-size: 0.72rem;
+      color: #475569;
+      margin-bottom: 12px;
+    }
+
+    .copy-note span { color: #64748b; }
+
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-family: inherit;
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: #cbd5e1;
+      background: rgba(0,0,0,0.2);
+      border-radius: 8px;
+      padding: 16px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all 0.15s;
+    }
+
+    .btn-copy {
+      background: #00D4B8;
+      color: #0A1628;
+    }
+
+    .btn-copy:hover { background: #00bfa5; }
+
+    .btn-copy.copied {
+      background: #22c55e;
+      color: white;
+    }
+
+    .action-note {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+      padding: 8px 12px;
+      background: rgba(234,179,8,0.08);
+      border: 1px solid rgba(234,179,8,0.2);
+      border-radius: 8px;
+      font-size: 0.78rem;
+      color: #fbbf24;
+    }
+
+    .image-ref {
+      font-size: 0.75rem;
+      color: #475569;
+      margin-top: 10px;
+    }
+
+    .image-ref code {
+      background: rgba(255,255,255,0.06);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>PharmaGrowth — Skills Pack Launch</h1>
+    <p>2-week post sequence · 8 posts · LinkedIn, Facebook, Instagram</p>
+  </header>
+
+  <!-- Calendar -->
+  <div class="calendar">
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Platform</th>
+          <th>Post</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Week 1 · Mon</td><td><span class="platform-tag li">LinkedIn</span> <span class="platform-tag fb">Facebook</span></td><td>Post 1 — Problem</td><td>post-1-problem.png</td></tr>
+        <tr><td>Week 1 · Wed</td><td><span class="platform-tag li">LinkedIn</span> <span class="platform-tag fb">Facebook</span></td><td>Post 2 — Story</td><td>post-2-story.png</td></tr>
+        <tr><td>Week 1 · Fri</td><td><span class="platform-tag ig">Instagram</span></td><td>Brand Teaser (Story)</td><td>instagram-story.png</td></tr>
+        <tr><td>Week 2 · Mon</td><td><span class="platform-tag li">LinkedIn</span> <span class="platform-tag fb">Facebook</span></td><td>Post 3 — Reveal</td><td>post-3-reveal.png</td></tr>
+        <tr><td>Week 2 · Tue</td><td><span class="platform-tag ig">Instagram</span></td><td>Product Post (Feed)</td><td>skills-pack-social-cover.png</td></tr>
+        <tr><td>Week 2 · Wed</td><td><span class="platform-tag li">LinkedIn</span> <span class="platform-tag fb">Facebook</span></td><td>Post 4 — Inside</td><td>post-4-inside.png</td></tr>
+        <tr><td>Week 2 · Fri</td><td><span class="platform-tag ig">Instagram</span></td><td>Launch Story</td><td>instagram-story.png</td></tr>
+        <tr><td>Week 2 · Sat</td><td><span class="platform-tag li">LinkedIn</span> <span class="platform-tag fb">Facebook</span></td><td>Post 5 — CTA</td><td>post-5-launch.png</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Posts -->
+  <div class="posts">
+
+    <div class="week-label">Week 1</div>
+
+    <!-- Post 1 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-meta">
+          <span class="day-badge">Week 1 · Monday</span>
+          <span class="post-title">Post 1 — Problem</span>
+          <span class="platform-tag li">LinkedIn</span>
+          <span class="platform-tag fb">Facebook</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <pre id="post1">Most pharma marketers are using AI wrong.
+
+They're asking ChatGPT to "write a marketing plan."
+They get a generic 5-page document that could apply to any brand in any country.
+
+They paste it into Word, spend 2 hours editing it, and wonder why it still feels off.
+
+The problem isn't the AI.
+The problem is that AI doesn't know:
+— Your brand
+— Your target HCP segment
+— SFDA rules
+— How pharmacy channels work in KSA
+— What a sell-in report actually looks like
+
+I spent the last 6 months building something that fixes this.
+
+More on that Thursday.</pre>
+        <div class="actions">
+          <button class="btn-copy" onclick="copyPost('post1', this)">Copy</button>
+        </div>
+        <div class="action-note">Facebook only: add "Follow PharmaGrowth to stay updated." at the end</div>
+        <div class="image-ref">Image: <code>02 — LinkedIn Posts/post-1-problem.png</code></div>
+      </div>
+    </div>
+
+    <!-- Post 2 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-meta">
+          <span class="day-badge">Week 1 · Wednesday</span>
+          <span class="post-title">Post 2 — Story</span>
+          <span class="platform-tag li">LinkedIn</span>
+          <span class="platform-tag fb">Facebook</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <pre id="post2">I've been in pharma marketing for 20+ years.
+
+Regional brands. OTC launches. KOL strategy. Trade marketing.
+I've done it all the long way — Word documents, Excel models, PowerPoint decks built from scratch every cycle.
+
+Then I started using Claude Code to build custom AI tools for exactly the kind of work we do in this region.
+
+Not generic prompts. Actual workflows:
+→ A campaign brief that asks the right questions
+→ A marketing plan structure that matches how GCC brand managers think
+→ A competitive analysis framed around SFDA and local market dynamics
+
+I'm not a developer. I'm a marketer who learned to build.
+
+And now I'm packaging everything I built — for you.
+
+Details Sunday.</pre>
+        <div class="actions">
+          <button class="btn-copy" onclick="copyPost('post2', this)">Copy</button>
+        </div>
+        <div class="image-ref">Image: <code>02 — LinkedIn Posts/post-2-story.png</code></div>
+      </div>
+    </div>
+
+    <!-- Post 3 Instagram -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-meta">
+          <span class="day-badge">Week 1 · Friday</span>
+          <span class="post-title">Brand Teaser — Story</span>
+          <span class="platform-tag ig">Instagram</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <pre id="post3">Something built specifically for pharma marketers in KSA and the GCC is coming.
+
+Not a generic AI tool. Not imported from Silicon Valley.
+
+Built from 20 years in this market.
+
+Stay tuned.
+
+#PharmaMarketing #KSA #GCC #AITools #PharmaGrowth</pre>
+        <div class="actions">
+          <button class="btn-copy" onclick="copyPost('post3', this)">Copy</button>
+        </div>
+        <div class="image-ref">Image: <code>04 — Instagram/instagram-story.png</code></div>
+      </div>
+    </div>
+
+    <div class="week-label">Week 2</div>
+
+    <!-- Post 4 Reveal -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-meta">
+          <span class="day-badge">Week 2 · Monday</span>
+          <span class="post-title">Post 3 — Reveal</span>
+          <span class="platform-tag li">LinkedIn</span>
+          <span class="platform-tag fb">Facebook</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <pre id="post4">Introducing the Claude Skills Pack for Pharma.
+
+A set of AI-powered workflows built specifically for KSA and GCC pharma marketers — not imported from a Silicon Valley SaaS company, but built by someone who has lived this market.
+
+What's inside:
+→ Campaign Planner — brief to launch in one workflow
+→ Brand Marketing Plan Builder — 10-section plan, SFDA-aware
+→ Competitive Analyzer — local brands, local channels
+→ KOL Engagement Planner — mapped to real engagement models
+→ P&L Analyzer — contribution margin, sell-in vs sell-out
+→ KSA Pharma BD Agent — market intelligence, licensing, BD targeting
+
+These are not prompts.
+These are structured tools that know the context of your job.
+
+Link in comments.</pre>
+        <div class="actions">
+          <button class="btn-copy" onclick="copyPost('post4', this)">Copy</button>
+        </div>
+        <div class="action-note">Post Gumroad link as first comment after publishing</div>
+        <div class="image-ref">Image: <code>02 — LinkedIn Posts/post-3-reveal.png</code></div>
+      </div>
+    </div>
+
+    <!-- Post 5 Instagram Feed -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-meta">
+          <span class="day-badge">Week 2 · Tuesday</span>
+          <span class="post-title">Product Post — Feed</span>
+          <span class="platform-tag ig">Instagram</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <pre id="post5">6 AI tools built for pharma marketers in KSA and the GCC.
+
+Campaign briefs. Brand plans. Competitive maps. KOL strategy. P&L analysis. BD intelligence.
+
+All built around how this market actually works.
+
+Link in bio.
+
+#PharmaMarketing #KSA #GCC #AITools #BrandManager #PharmaGrowth #ClaudeAI</pre>
+        <div class="actions">
+          <button class="btn-copy" onclick="copyPost('post5', this)">Copy</button>
+        </div>
+        <div class="action-note">Update Instagram bio link to Gumroad URL before posting</div>
+        <div class="image-ref">Image: <code>06 — Product & Gumroad Covers/skills-pack-social-cover.png</code></div>
+      </div>
+    </div>
+
+    <!-- Post 6 Inside -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-meta">
+          <span class="day-badge">Week 2 · Wednesday</span>
+          <span class="post-title">Post 4 — Inside</span>
+          <span class="platform-tag li">LinkedIn</span>
+          <span class="platform-tag fb">Facebook</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <pre id="post6">Let me show you what "pharma-specific AI" actually means.
+
+When you open the Campaign Planner, it doesn't ask "what's your goal?"
+
+It asks:
+— Is this an Rx or OTC campaign?
+— What's the primary channel — HCP, consumer, or trade?
+— Do you need SFDA-compliant claims?
+— What's the campaign period and budget range?
+
+Then it builds the brief around your answers.
+
+That's the difference between a generic AI tool and one built for this industry.
+
+The Claude Skills Pack includes 6 tools like this — each one designed around the real decisions pharma marketers in KSA face every cycle.
+
+Early access is open this week. Link in comments.</pre>
+        <div class="actions">
+          <button class="btn-copy" onclick="copyPost('post6', this)">Copy</button>
+        </div>
+        <div class="action-note">Post Gumroad link as first comment after publishing</div>
+        <div class="image-ref">Image: <code>02 — LinkedIn Posts/post-4-inside.png</code></div>
+      </div>
+    </div>
+
+    <!-- Post 7 Instagram Story -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-meta">
+          <span class="day-badge">Week 2 · Friday</span>
+          <span class="post-title">Launch Story</span>
+          <span class="platform-tag ig">Instagram</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <pre id="post7">It's live. Link in bio.
+
+Claude Skills Pack for Pharma — 6 AI tools built for KSA & GCC brand managers.</pre>
+        <div class="actions">
+          <button class="btn-copy" onclick="copyPost('post7', this)">Copy</button>
+        </div>
+        <div class="image-ref">Image: <code>04 — Instagram/instagram-story.png</code></div>
+      </div>
+    </div>
+
+    <!-- Post 8 CTA -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-meta">
+          <span class="day-badge">Week 2 · Saturday</span>
+          <span class="post-title">Post 5 — CTA Close</span>
+          <span class="platform-tag li">LinkedIn</span>
+          <span class="platform-tag fb">Facebook</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <pre id="post8">The Claude Skills Pack for Pharma has been available for 5 days.
+
+Here's what people have said:
+
+"Finally something built for how we actually work."
+"The marketing plan builder alone is worth it."
+"I used the campaign planner for a launch brief this week — took 20 minutes."
+
+If you're a pharma or consumer healthcare marketer in KSA or the GCC and you're still doing this work manually — or using generic AI that doesn't understand your market — this is for you.
+
+6 tools. One pack. Built on 20 years in this industry.
+
+Link in comments.</pre>
+        <div class="actions">
+          <button class="btn-copy" onclick="copyPost('post8', this)">Copy</button>
+        </div>
+        <div class="action-note">Post Gumroad link as first comment after publishing</div>
+        <div class="image-ref">Image: <code>02 — LinkedIn Posts/post-5-launch.png</code></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Assets Section -->
+  <div style="max-width:760px;margin:48px auto 0;">
+    <div class="week-label" style="margin-bottom:16px;">Image Assets</div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
+
+      <div class="card">
+        <div class="card-header"><span class="post-title">Brand Assets</span></div>
+        <div class="card-body" style="padding:14px 18px;">
+          <p class="copy-note" style="margin-bottom:10px;">01 — Brand Assets/</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+            <li class="image-ref"><code>pharmagrowth-profile-picture.png</code><br><span style="color:#475569;font-size:0.7rem;">Facebook + Instagram profile</span></li>
+            <li class="image-ref"><code>pharmagrowth-brand-logo.png</code></li>
+            <li class="image-ref"><code>pharmagrowth-facebook-cover.png</code></li>
+            <li class="image-ref"><code>pharmagrowth-linkedin-banner.png</code></li>
+            <li class="image-ref"><code>pharmagrowth-instagram-template.png</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="post-title">LinkedIn Posts</span></div>
+        <div class="card-body" style="padding:14px 18px;">
+          <p class="copy-note" style="margin-bottom:10px;">02 — LinkedIn Posts/</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+            <li class="image-ref"><code>linkedin-post-1-problem.png</code></li>
+            <li class="image-ref"><code>linkedin-post-2-story.png</code></li>
+            <li class="image-ref"><code>linkedin-post-3-reveal.png</code></li>
+            <li class="image-ref"><code>linkedin-post-4-inside.png</code></li>
+            <li class="image-ref"><code>linkedin-post-5-launch.png</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="post-title">Facebook Posts</span></div>
+        <div class="card-body" style="padding:14px 18px;">
+          <p class="copy-note" style="margin-bottom:10px;">03 — Facebook/</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+            <li class="image-ref"><code>facebook-post-1-problem.png</code></li>
+            <li class="image-ref"><code>facebook-post-2-story.png</code></li>
+            <li class="image-ref"><code>facebook-post-3-reveal.png</code></li>
+            <li class="image-ref"><code>facebook-post-4-inside.png</code></li>
+            <li class="image-ref"><code>facebook-post-5-launch.png</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="post-title">Instagram</span></div>
+        <div class="card-body" style="padding:14px 18px;">
+          <p class="copy-note" style="margin-bottom:10px;">04 — Instagram/</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+            <li class="image-ref"><code>channel-instagram-feed.png</code></li>
+            <li class="image-ref"><code>channel-instagram-story.png</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="post-title">Product & Gumroad</span></div>
+        <div class="card-body" style="padding:14px 18px;">
+          <p class="copy-note" style="margin-bottom:10px;">06 — Product & Gumroad Covers/</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+            <li class="image-ref"><code>skills-pack-social-cover.png</code><br><span style="color:#475569;font-size:0.7rem;">Main product cover</span></li>
+            <li class="image-ref"><code>claude-skills-pack-cover.png</code></li>
+            <li class="image-ref"><code>skills-pack-linkedin-banner.png</code></li>
+            <li class="image-ref"><code>gumroad-cover-campaign-brief-template.png</code></li>
+            <li class="image-ref"><code>gumroad-cover-marketing-plan-template.png</code></li>
+            <li class="image-ref"><code>gumroad-cover-playbook.png</code></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="height:60px;"></div>
+
+  <script>
+    function copyPost(id, btn) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = 'Copied';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>
